@@ -15,6 +15,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Bloodlust_0": {
@@ -33,6 +34,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Kind_0": {
@@ -51,6 +53,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Psychopath_0": {
@@ -69,6 +72,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Cannibal_0": {
@@ -87,6 +91,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Abrasive_0": {
@@ -105,6 +110,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "TooSmart_0": {
@@ -126,6 +132,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Brawler_0": {
@@ -146,6 +153,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Masochist_0": {
@@ -164,6 +172,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "NightOwl_0": {
@@ -182,6 +191,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Greedy_0": {
@@ -200,6 +210,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Jealous_0": {
@@ -218,6 +229,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Ascetic_0": {
@@ -236,6 +248,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Gay_0": {
@@ -254,6 +267,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Bisexual_0": {
@@ -272,6 +286,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Asexual_0": {
@@ -290,6 +305,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "AnnoyingVoice_0": {
@@ -308,6 +324,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "CreepyBreathing_0": {
@@ -326,6 +343,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Pyromaniac_0": {
@@ -344,6 +362,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Wimp_0": {
@@ -364,6 +383,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Nimble_0": {
@@ -384,6 +404,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "FastLearner_0": {
@@ -404,6 +425,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "SlowLearner_0": {
@@ -424,6 +446,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Undergrounder_0": {
@@ -442,6 +465,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Transhumanist_0": {
@@ -460,6 +484,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "BodyPurist_0": {
@@ -478,6 +503,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "DislikesMen_0": {
@@ -496,6 +522,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "DislikesWomen_0": {
@@ -514,6 +541,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "GreatMemory_0": {
@@ -532,6 +560,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Tough_0": {
@@ -550,6 +579,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "TorturedArtist_0": {
@@ -568,6 +598,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Gourmand_0": {
@@ -586,6 +617,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "QuickSleeper_0": {
@@ -606,6 +638,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "SpeedOffset_-1": {
@@ -626,6 +659,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "SpeedOffset_1": {
@@ -646,6 +680,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "SpeedOffset_2": {
@@ -666,6 +701,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "DrugDesire_2": {
@@ -684,6 +720,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "DrugDesire_1": {
@@ -702,6 +739,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "DrugDesire_-1": {
@@ -720,6 +758,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "NaturalMood_2": {
@@ -738,6 +777,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "NaturalMood_1": {
@@ -756,6 +796,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "NaturalMood_-1": {
@@ -774,6 +815,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "NaturalMood_-2": {
@@ -792,6 +834,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Nerves_2": {
@@ -812,6 +855,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Nerves_1": {
@@ -832,6 +876,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Nerves_-1": {
@@ -852,6 +897,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Nerves_-2": {
@@ -872,6 +918,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Neurotic_1": {
@@ -893,6 +940,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Neurotic_2": {
@@ -914,6 +962,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Industriousness_2": {
@@ -934,6 +983,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Industriousness_1": {
@@ -954,6 +1004,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Industriousness_-1": {
@@ -974,6 +1025,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Industriousness_-2": {
@@ -994,6 +1046,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "PsychicSensitivity_2": {
@@ -1014,6 +1067,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "PsychicSensitivity_1": {
@@ -1034,6 +1088,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "PsychicSensitivity_-1": {
@@ -1054,6 +1109,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "PsychicSensitivity_-2": {
@@ -1074,6 +1130,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "ShootingAccuracy_1": {
@@ -1095,6 +1152,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "ShootingAccuracy_-1": {
@@ -1116,6 +1174,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Beauty_2": {
@@ -1136,6 +1195,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Beauty_1": {
@@ -1156,6 +1216,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Beauty_-1": {
@@ -1176,6 +1237,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Beauty_-2": {
@@ -1196,6 +1258,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Immunity_1": {
@@ -1216,6 +1279,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Immunity_-1": {
@@ -1234,6 +1298,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Core",
+    "modactive": true,
     "Version": 1
   },
   "Delicate_0": {
@@ -1252,6 +1317,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Biotech",
+    "modactive": true,
     "Version": 1
   },
   "Recluse_0": {
@@ -1270,6 +1336,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Biotech",
+    "modactive": true,
     "Version": 1
   },
   "PerfectMemory_0": {
@@ -1288,6 +1355,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Anomaly",
+    "modactive": true,
     "Version": 1
   },
   "Occultist_0": {
@@ -1309,6 +1377,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Anomaly",
+    "modactive": true,
     "Version": 1
   },
   "Joyous_0": {
@@ -1327,6 +1396,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Anomaly",
+    "modactive": true,
     "Version": 1
   },
   "BodyMastery_0": {
@@ -1345,6 +1415,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Anomaly",
+    "modactive": true,
     "Version": 1
   },
   "Disturbing_0": {
@@ -1363,6 +1434,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Anomaly",
+    "modactive": true,
     "Version": 1
   },
   "VoidFascination_0": {
@@ -1381,6 +1453,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Anomaly",
+    "modactive": true,
     "Version": 1
   },
   "HAR_Xenophobia_1": {
@@ -1399,6 +1472,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Humanoid Alien Races",
+    "modactive": true,
     "Version": 1
   },
   "HAR_Xenophobia_-1": {
@@ -1417,6 +1491,7 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Humanoid Alien Races",
+    "modactive": true,
     "Version": 1
   },
   "Wolfein_PureBlood_0": {
@@ -1439,6 +1514,1178 @@
     "KarmaTypeForAdding": null,
     "KarmaTypeForRemoving": null,
     "ModSource": "Wolfein Race",
+    "modactive": true,
+    "Version": 1
+  },
+  "VPE_Thrall_0": {
+    "DefName": "VPE_Thrall",
+    "Name": "Thrall",
+    "Degree": 0,
+    "Description": "Psychic enthrallment caused by incredibly strong mental influence. Thralls don't need to sleep or have recreation, but are unable to do skilled work and engage in social interactions.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Psycasts Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "Hygienic_2": {
+    "DefName": "Hygienic",
+    "Name": "Germaphobe",
+    "Degree": 2,
+    "Description": "[PAWN_name] is obsessed with germs and will wash much more frequently than normal.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 240,
+    "RemovePrice": 400,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Dubs Bad Hygiene",
+    "modactive": true,
+    "Version": 1
+  },
+  "Hygienic_1": {
+    "DefName": "Hygienic",
+    "Name": "Hygienic",
+    "Degree": 1,
+    "Description": "[PAWN_name] is very hygienic and will wash more frequently.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 194,
+    "RemovePrice": 324,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Dubs Bad Hygiene",
+    "modactive": true,
+    "Version": 1
+  },
+  "Hygienic_-1": {
+    "DefName": "Hygienic",
+    "Name": "Unhygienic",
+    "Degree": -1,
+    "Description": "[PAWN_name] is very unhygienic and will wash less frequently.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 194,
+    "RemovePrice": 324,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Dubs Bad Hygiene",
+    "modactive": true,
+    "Version": 1
+  },
+  "Hygienic_-2": {
+    "DefName": "Hygienic",
+    "Name": "Slob",
+    "Degree": -2,
+    "Description": "[PAWN_name] has very low standards of cleanliness and will only wash when they absolutely have to.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 240,
+    "RemovePrice": 400,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Dubs Bad Hygiene",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_AbsentMinded_0": {
+    "DefName": "VTE_AbsentMinded",
+    "Name": "Absent-minded",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} tends to let {PAWN_possessive} mind drift, even in the middle of work. {PAWN_pronoun} may sometimes stop tasks at random.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Eccentric_0": {
+    "DefName": "VTE_Eccentric",
+    "Name": "Eccentric",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} has a screw loose, but it comes with a sharper scientific mind.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Perfectionist_0": {
+    "DefName": "VTE_Perfectionist",
+    "Name": "Perfectionist",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} strives for perfection in {PAWN_possessive} work. {PAWN_pronoun} produces higher-quality products, but works more slowly. Failing to meet {PAWN_possessive} standards causes unhappiness, and on rare occasions {PAWN_pronoun} may abandon a project mid-way.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Coward_0": {
+    "DefName": "VTE_Coward",
+    "Name": "Coward",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef}'s instincts lean heavily toward cowardice. In danger, {PAWN_pronoun} will often hide or run before standing to fight.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Brave_0": {
+    "DefName": "VTE_Brave",
+    "Name": "Brave",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} has stronger mental and physical fortitude than most. {PAWN_pronoun} can endure pain more readily, and is slower to break under harsh conditions.",
+    "Stats": [
+      "-0.2 Mental break threshold",
+      "+0.2 Pain shock threshold"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 225,
+    "RemovePrice": 375,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Clumsy_0": {
+    "DefName": "VTE_Clumsy",
+    "Name": "Clumsy",
+    "Degree": 0,
+    "Description": "Minor bruises and scrapes plague {PAWN_nameDef}, usually from tripping or falling due to poor coordination.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_HeatInclined_0": {
+    "DefName": "VTE_HeatInclined",
+    "Name": "Heat inclined",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} enjoys the heat of a dry summer day. {PAWN_pronoun} doesn't mind working up a sweat or sleeping in warmth.",
+    "Stats": [
+      "+10 Max comfortable temperature"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 900,
+    "RemovePrice": 1500,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_ColdInclined_0": {
+    "DefName": "VTE_ColdInclined",
+    "Name": "Cold inclined",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} enjoys the chill of a brisk winter night. {PAWN_pronoun} doesn't mind shivering or sleeping in the cold.",
+    "Stats": [
+      "-10 Min comfortable temperature"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 270,
+    "RemovePrice": 2250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_HeavySleeper_0": {
+    "DefName": "VTE_HeavySleeper",
+    "Name": "Heavy sleeper",
+    "Degree": 0,
+    "Description": "A bomb could go off beside {PAWN_nameDef} while {PAWN_pronoun} sleeps, and {PAWN_pronoun} would keep right on sleeping. {PAWN_pronoun} can't be bothered to work or defend the colony mid-nap.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Neat_0": {
+    "DefName": "VTE_Neat",
+    "Name": "Neat",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is naturally hygienic and organized. {PAWN_pronoun} doesn't track dirt or scatter trash, and enjoys cleaning.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Slob_0": {
+    "DefName": "VTE_Slob",
+    "Name": "Slob",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is naturally sloppy, leaving trash and dirt scattered around. At least {PAWN_pronoun} isn't much bothered by messy surroundings.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Workaholic_0": {
+    "DefName": "VTE_Workaholic",
+    "Name": "Workaholic",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} struggles to take breaks or rest mid-job. {PAWN_pronoun} will keep working, even at the expense of {PAWN_possessive} health or sleep.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_IronStomach_0": {
+    "DefName": "VTE_IronStomach",
+    "Name": "Iron stomach",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} has never known nausea. Food poisoning and vomiting are foreign to {PAWN_objective}.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_AnimalLover_0": {
+    "DefName": "VTE_AnimalLover",
+    "Name": "Animal lover",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} can't stand cruelty toward animals. {PAWN_pronoun} feels happier when nuzzled or acting as master to a tamed animal, but is more deeply upset when losing one. {PAWN_pronoun} also refuses to butcher animals.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_AnimalHater_0": {
+    "DefName": "VTE_AnimalHater",
+    "Name": "Animal hater",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} believes in human superiority over animals. {PAWN_pronoun} dislikes bonding or being nuzzled, but feels satisfaction when animals die or are sold.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_BigBoned_0": {
+    "DefName": "VTE_BigBoned",
+    "Name": "Big-boned",
+    "Degree": 0,
+    "Description": "Whether from bulk or awkward posture, {PAWN_nameDef} has broken a few chairs in {PAWN_possessive} time, and is likely to break more.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Rebel_0": {
+    "DefName": "VTE_Rebel",
+    "Name": "Rebel",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} only plays by {PAWN_possessive} own rules. When forced, {PAWN_pronoun} will drag {PAWN_possessive} feet and work more slowly.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Submissive_0": {
+    "DefName": "VTE_Submissive",
+    "Name": "Submissive",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} needs clear direction on when and how to act. {PAWN_pronoun} works at normal speed only when ordered, and otherwise slows down.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Vengeful_0": {
+    "DefName": "VTE_Vengeful",
+    "Name": "Vengeful",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is fueled by spite. {PAWN_pronoun} can’t stand sharing the colony with rivals, and feels happier when one of them dies.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Technophobe_0": {
+    "DefName": "VTE_Technophobe",
+    "Name": "Technophobe",
+    "Degree": 0,
+    "Description": "Whether from trauma or fear of change, {PAWN_nameDef} rejects modernity. {PAWN_pronoun} may lash out at machines, refuses to research, and feels satisfaction from destroying mechanoids.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_FunLoving_0": {
+    "DefName": "VTE_FunLoving",
+    "Name": "Fun-loving",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} lives for a good time. {PAWN_pronoun} remembers parties fondly, and the joy lasts far longer than it does for most.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Dunce_0": {
+    "DefName": "VTE_Dunce",
+    "Name": "Dunce",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} has limited mental capacity. {PAWN_pronoun} learns slowly and struggles with conversation, but tends to be naturally happy.",
+    "Stats": [
+      "-50.0% Global learning factor",
+      "-0.5 Social impact"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 123,
+    "RemovePrice": 1031,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_MartialArtist_0": {
+    "DefName": "VTE_MartialArtist",
+    "Name": "Martial artist",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} has trained in melee combat and learned a special move to disarm opponents.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Snob_0": {
+    "DefName": "VTE_Snob",
+    "Name": "Snob",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} believes they belong in high society, and loves nothing more than critiquing art and brushing elbows with royalty.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Squeamish_0": {
+    "DefName": "VTE_Squeamish",
+    "Name": "Squeamish",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} gets a sour stomach around blood or corpses. Vomiting is just part of life for {PAWN_objective}.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Anxious_0": {
+    "DefName": "VTE_Anxious",
+    "Name": "Anxious",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is naturally anxious, especially in social situations. {PAWN_pronoun} avoids gatherings and sometimes retreats to {PAWN_possessive} room to cope.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Insatiable_0": {
+    "DefName": "VTE_Insatiable",
+    "Name": "Insatiable",
+    "Degree": 0,
+    "Description": "No amount of lovin’ is ever enough for {PAWN_nameDef}. {PAWN_pronoun} tends to move between partners and seeks intimacy often.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Prude_0": {
+    "DefName": "VTE_Prude",
+    "Name": "Prude",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} gives {PAWN_possessive} body only to a spouse and would never initiate divorce. {PAWN_pronoun} also dislikes nudity more than most.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_CouchPotato_0": {
+    "DefName": "VTE_CouchPotato",
+    "Name": "Couch potato",
+    "Degree": 0,
+    "Description": "An armchair and a screen are all {PAWN_nameDef} needs to be happy. {PAWN_pronoun} never tires of watching television, and always feels good after.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_CatPerson_0": {
+    "DefName": "VTE_CatPerson",
+    "Name": "Cat person",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} enjoys the company of cats and gravitates toward bonding with them, but dislikes dogs.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_DogPerson_0": {
+    "DefName": "VTE_DogPerson",
+    "Name": "Dog person",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} enjoys the company of dogs and gravitates toward bonding with them, but dislikes cats.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Prodigy_0": {
+    "DefName": "VTE_Prodigy",
+    "Name": "Prodigy",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} has a sharp, logical mind. {PAWN_pronoun} researches faster than most, and {PAWN_possessive} rational outlook makes {PAWN_objective} less prone to mental breaks.",
+    "Stats": [
+      "+0.2 Mental break threshold"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 180,
+    "RemovePrice": 300,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Menagerist_0": {
+    "DefName": "VTE_Menagerist",
+    "Name": "Menagerist",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} believes animals are essential to life and society. {PAWN_pronoun} feels happier with more of them around, and is especially skilled at taming and training.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_ChildOfSea_0": {
+    "DefName": "VTE_ChildOfSea",
+    "Name": "Ocean lover",
+    "Degree": 0,
+    "Description": "The sea calls to {PAWN_nameDef}. {PAWN_pronoun} feels happier when near the ocean or a deep river.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_ChildOfMountain_0": {
+    "DefName": "VTE_ChildOfMountain",
+    "Name": "Mountain lover",
+    "Degree": 0,
+    "Description": "The mountains call to {PAWN_nameDef}. {PAWN_pronoun} feels happier when near a large mountain.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_MadSurgeon_0": {
+    "DefName": "VTE_MadSurgeon",
+    "Name": "Mad surgeon",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} hides a twisted obsession. {PAWN_pronoun} treats organ harvesting as a dark experiment and takes pleasure in it. Harvesting makes {PAWN_objective} happy, but going too long without fuels growing unrest.",
+    "Stats": [
+      "+20.0% Surgery success chance factor"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 180,
+    "RemovePrice": 300,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_DrunkenMaster_0": {
+    "DefName": "VTE_DrunkenMaster",
+    "Name": "Drunken master",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} fights best when drunk. {PAWN_pronoun} grows more dangerous in melee the more intoxicated {PAWN_pronoun} becomes.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Kleptomaniac_0": {
+    "DefName": "VTE_Kleptomaniac",
+    "Name": "Kleptomaniac",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is compelled to steal, even from guests and allies, risking angering others.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Stoner_0": {
+    "DefName": "VTE_Stoner",
+    "Name": "Stoner",
+    "Degree": 0,
+    "Description": "Smokeleaf is a way of life for {PAWN_nameDef}. {PAWN_pronoun} adores it and would rather die than give it up.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Lush_0": {
+    "DefName": "VTE_Lush",
+    "Name": "Lush",
+    "Degree": 0,
+    "Description": "Alcohol is a way of life for {PAWN_nameDef}. {PAWN_pronoun} adores drinking and would rather die than give it up.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Wanderlust_0": {
+    "DefName": "VTE_Wanderlust",
+    "Name": "Wanderlust",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} loves to travel and feels happiest on the move. {PAWN_pronoun} grows restless when staying too long in one place, but moves quickly and forages well while caravanning.",
+    "Stats": [
+      "+0.2 Foraged food amount"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 180,
+    "RemovePrice": 300,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Insomniac_0": {
+    "DefName": "VTE_Insomniac",
+    "Name": "Insomniac",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is never fully asleep or awake. {PAWN_pronoun} lurches along in a slow, shambler-like state, and only sleeps once every few days.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_WorldWeary_0": {
+    "DefName": "VTE_WorldWeary",
+    "Name": "World weary",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} has grown tired of the world. {PAWN_pronoun} struggles with bleak thoughts, making {PAWN_possessive} personality difficult to befriend.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Desensitized_0": {
+    "DefName": "VTE_Desensitized",
+    "Name": "Desensitized",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is hardened by old emotional trauma. {PAWN_pronoun} feels nothing from death or loss, whether animal, colonist, family, or prisoner.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_RefinedPalate_0": {
+    "DefName": "VTE_RefinedPalate",
+    "Name": "Refined palate",
+    "Degree": 0,
+    "Description": "Only the finest meals satisfy {PAWN_nameDef}. {PAWN_pronoun} feels indifferent toward ordinary food, but savors lavish meals and gains greater joy from them.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Academian_0": {
+    "DefName": "VTE_Academian",
+    "Name": "Academian",
+    "Degree": 0,
+    "Description": "Through scholastic pursuit, {PAWN_nameDef} has become well-read. {PAWN_pronoun} excels in science and medicine, and tends patients with greater skill.",
+    "Stats": [
+      "+0.2 Medical tend quality"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 180,
+    "RemovePrice": 300,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Groundbreaker_0": {
+    "DefName": "VTE_Groundbreaker",
+    "Name": "Groundbreaker",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} believes infrastructure is everything. {PAWN_pronoun} is a natural builder and stoneworker, constructing and mining with greater speed and efficiency.",
+    "Stats": [
+      "+0.2 Mining yield",
+      "+0.2 Construction speed"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 210,
+    "RemovePrice": 350,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Gastronomist_0": {
+    "DefName": "VTE_Gastronomist",
+    "Name": "Gastronomist",
+    "Degree": 0,
+    "Description": "To {PAWN_nameDef}, food is art. {PAWN_pronoun} creates beautiful, delicious meals that are almost always safe to eat.",
+    "Stats": [
+      "-0.25 Food poison chance"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 56,
+    "RemovePrice": 468,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Ecologist_0": {
+    "DefName": "VTE_Ecologist",
+    "Name": "Ecologist",
+    "Degree": 0,
+    "Description": "Flora and fauna are vital to {PAWN_nameDef}. {PAWN_pronoun} uses every part of plants and animals, and appreciates nature’s gifts.",
+    "Stats": [
+      "+0.2 Plant harvest yield",
+      "+0.2 Butchery efficiency"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 210,
+    "RemovePrice": 350,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Tycoon_0": {
+    "DefName": "VTE_Tycoon",
+    "Name": "Tycoon",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} has an eye for silver and a silver tongue to match. {PAWN_pronoun} values {PAWN_possessive} own goods highly, and convinces others to do the same.",
+    "Stats": [
+      "+0.25 Trade price improvement"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 187,
+    "RemovePrice": 312,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_ThickSkinned_0": {
+    "DefName": "VTE_ThickSkinned",
+    "Name": "Thick skinned",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is strangely hypercoagulating and will bleed much more slowly than most.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_ThinSkinned_0": {
+    "DefName": "VTE_ThinSkinned",
+    "Name": "Thin skinned",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} is strangely hemophilic and tends to bleed much more profusely than others.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "VTE_Schizoid_0": {
+    "DefName": "VTE_Schizoid",
+    "Name": "Schizoid",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} bottles up {PAWN_possessive} feelings for long stretches of time. When the pressure grows too great, {PAWN_pronoun} may suddenly break down.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Vanilla Traits Expanded",
+    "modactive": true,
+    "Version": 1
+  },
+  "Faith_0": {
+    "DefName": "Faith",
+    "Name": "Faith",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef}'s faith is firm. It allows {PAWN_objective} to move under any circumstances.",
+    "Stats": [
+      "+0.1 Pain shock threshold",
+      "-0.15 Mental break threshold"
+    ],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 194,
+    "RemovePrice": 324,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "NewRatkinPlus[1.6]",
+    "modactive": true,
+    "Version": 1
+  },
+  "RKTrait_YunDanFengQing_0": {
+    "DefName": "RKTrait_YunDanFengQing",
+    "Name": "Take it easy",
+    "Degree": 0,
+    "Description": "{PAWN_nameDef} don't care about the awful bedroom environment.",
+    "Stats": [],
+    "Conflicts": [],
+    "CanAdd": true,
+    "CanRemove": true,
+    "AddPrice": 150,
+    "RemovePrice": 250,
+    "BypassLimit": false,
+    "CustomName": false,
+    "KarmaTypeForAdding": null,
+    "KarmaTypeForRemoving": null,
+    "ModSource": "Ratkin Gene Expanded",
+    "modactive": true,
     "Version": 1
   }
 }
