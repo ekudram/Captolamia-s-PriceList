@@ -8,8 +8,8 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #4a4a4a;
-    background: linear-gradient(135deg, #fff9f0 0%, #fff2e6 100%);
+    color: #2d3e50;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e6eef9 100%);
     min-height: 100vh;
 }
 
@@ -24,21 +24,22 @@ header {
     text-align: center;
     margin-bottom: 30px;
     padding: 25px;
-    background: linear-gradient(135deg, #ffb347 0%, #ff9f4b 100%);
+    background: linear-gradient(135deg, #2c3e50 0%, #1e3c5c 100%);
     color: white;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(255, 159, 75, 0.25);
+    box-shadow: 0 4px 15px rgba(30, 60, 92, 0.25);
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 header p {
     font-size: 1.1rem;
     opacity: 0.95;
+    color: #e1f0fa;
 }
 
 /* Tabs */
@@ -59,19 +60,19 @@ header p {
     font-weight: 500;
     transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
-    color: #6b6b6b;
+    color: #5a6c7e;
     white-space: nowrap;
 }
 
 .tab-button:hover {
-    background: #fff6ed;
-    color: #ff9f4b;
+    background: #f0f7ff;
+    color: #c44536;
 }
 
 .tab-button.active {
     background: white;
-    border-bottom: 3px solid #ffb347;
-    color: #ff9f4b;
+    border-bottom: 3px solid #c44536;
+    color: #c44536;
     font-weight: 600;
 }
 
@@ -81,7 +82,7 @@ header p {
     border-radius: 0 0 12px 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     min-height: 400px;
-    border: 1px solid #ffedd5;
+    border: 1px solid #d9e6f2;
     border-top: none;
 }
 
@@ -102,18 +103,18 @@ header p {
 .search-input {
     width: 100%;
     padding: 14px;
-    border: 2px solid #ffedd5;
+    border: 2px solid #d9e6f2;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background: #fffaf5;
+    background: #f8fcff;
 }
 
 .search-input:focus {
     outline: none;
-    border-color: #ffb347;
+    border-color: #c44536;
     background: white;
-    box-shadow: 0 0 0 3px rgba(255, 179, 71, 0.1);
+    box-shadow: 0 0 0 3px rgba(196, 69, 54, 0.1);
 }
 
 /* Table styles */
@@ -130,12 +131,12 @@ header p {
 }
 
 .items-table th {
-    background: linear-gradient(135deg, #fff6ed 0%, #fff2e6 100%);
+    background: linear-gradient(135deg, #f0f7ff 0%, #e6f0fa 100%);
     padding: 16px;
     text-align: left;
     font-weight: 600;
-    color: #cc7f2f;
-    border-bottom: 2px solid #ffb347;
+    color: #1e3c5c;
+    border-bottom: 2px solid #c44536;
     cursor: pointer;
     user-select: none;
     position: relative;
@@ -143,7 +144,7 @@ header p {
 }
 
 .items-table th:hover {
-    background: linear-gradient(135deg, #fff2e6 0%, #ffedd5 100%);
+    background: linear-gradient(135deg, #e6f0fa 0%, #d9e6f2 100%);
 }
 
 .items-table th::after {
@@ -151,7 +152,7 @@ header p {
     position: absolute;
     right: 12px;
     opacity: 0.4;
-    color: #ffb347;
+    color: #c44536;
 }
 
 .items-table th.sort-asc::after {
@@ -166,13 +167,13 @@ header p {
 
 .items-table td {
     padding: 16px;
-    border-bottom: 1px solid #ffedd5;
+    border-bottom: 1px solid #d9e6f2;
     vertical-align: top;
     transition: background-color 0.2s ease;
 }
 
 .items-table tbody tr:hover {
-    background: #fffaf5;
+    background: #f8fcff;
 }
 
 .items-table tbody tr:last-child td {
@@ -183,44 +184,68 @@ header p {
 .item-name {
     font-weight: 600;
     font-size: 1.05rem;
-    color: #cc7f2f;
+    color: #c44536;
     margin-bottom: 4px;
 }
 
 /* Metadata styles */
 .metadata {
     font-size: 0.85rem;
-    color: #9b7b6b;
+    color: #6f8a9f;
     display: block;
     line-height: 1.4;
 }
 
 .metadata .usage {
-    color: #ff9f4b;
+    color: #c44536;
     font-weight: 500;
 }
 
 /* Price highlighting */
 .items-table td:nth-child(2) {
     font-weight: 600;
-    color: #cc7f2f;
+    color: #1e3c5c;
 }
 
 /* Race-specific styles */
 .race-xenotype {
-    background-color: #fffaf5;
+    background-color: #f8fcff;
 }
 
 .race-base {
     background-color: white;
-    border-left: 3px solid #ffb347;
+    border-left: 3px solid #c44536;
+}
+
+/* Purple accent for special items */
+.items-table tr.purple-accent td:first-child {
+    border-left: 3px solid #6b4e71;
+}
+
+.items-table tr.purple-accent .item-name {
+    color: #6b4e71;
+}
+
+.items-table tr.purple-accent:hover {
+    background: #f5f0f7;
+}
+
+/* Purple metadata styling */
+.metadata .purple-highlight {
+    color: #6b4e71;
+    font-weight: 500;
 }
 
 /* Trait description styles */
 .trait-description {
     margin-bottom: 8px;
     line-height: 1.5;
-    color: #6b4f3f;
+    color: #2d3e50;
+}
+
+.trait-description.purple-text {
+    color: #6b4e71;
+    font-style: italic;
 }
 
 /* Mobile priority indicators */
@@ -251,6 +276,10 @@ header p {
     .tab-button {
         padding: 12px 18px;
         font-size: 0.9rem;
+    }
+    
+    .tab-button.active {
+        color: #c44536;
     }
     
     .tab-pane {
@@ -311,15 +340,32 @@ header p {
 }
 
 .table-container::-webkit-scrollbar-track {
-    background: #ffedd5;
+    background: #d9e6f2;
     border-radius: 4px;
 }
 
 .table-container::-webkit-scrollbar-thumb {
-    background: #ffb347;
+    background: #c44536;
     border-radius: 4px;
 }
 
 .table-container::-webkit-scrollbar-thumb:hover {
-    background: #ff9f4b;
+    background: #a6382b;
+}
+
+/* Small purple touch for buttons or accents */
+.purple-dot::before {
+    content: "•";
+    color: #8a6a9c;
+    margin-right: 4px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* Gradient border option for special sections */
+.purple-orange-gradient {
+    border-image: linear-gradient(45deg, #c44536, #6b4e71) 1;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
 }
