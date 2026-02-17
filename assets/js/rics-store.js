@@ -287,11 +287,12 @@ processRacesData(racesObject) {
             <tr>
                 <td>
                     <div class="item-name">${this.escapeHtml(item.name)}</div>
-                    <span class="metadata">
-                        ${this.escapeHtml(item.defName)}
-                        <br>From ${this.escapeHtml(item.mod)}
-                        ${this.getUsageTypes(item)}
-                    </span>
+                        <span class="metadata">
+                            ${this.escapeHtml(item.defName)}
+                            <br>From ${this.escapeHtml(this.getModDisplayName(item.mod))}
+                            <br>Usage: !buy ${this.escapeHtml(item.name)} or !buy ${this.escapeHtml(item.defName)}
+                            ${this.getUsageTypes(item)}
+                        </span>
                 </td>
                 <td class="no-wrap">
                     <strong>${item.price}</strong>
@@ -299,7 +300,6 @@ processRacesData(racesObject) {
                 </td>
                 <td>${this.escapeHtml(item.category)}</td>
                 <td class="no-wrap">${item.quantityLimit}</td>
-                <td>${item.limitMode || 'N/A'}</td>
             </tr>
         `).join('');
     }
@@ -615,6 +615,11 @@ processRacesData(racesObject) {
         // Get the HTML back, which will have proper escaping for text content
         // but preserve the span tags we inserted
         return tempDiv.innerHTML;
+    }
+
+    getModDisplayName(mod) {
+        if (mod === 'Core') return 'RimWorld';
+        return mod || 'Unknown';
     }
 
     loadSampleData() {
