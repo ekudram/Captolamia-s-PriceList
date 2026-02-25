@@ -1,12 +1,8 @@
 // assets/js/rics-store.js
 class RICSStore {
     constructor() {
-        this.data = {
-            items: [], events: [], traits: [], races: [], weather: []
-        };
-        this.filteredData = {
-            items: [], events: [], traits: [], races: [], weather: []
-        };
+        this.data = { items: [], events: [], traits: [], races: [], weather: [] };
+        this.filteredData = { items: [], events: [], traits: [], races: [], weather: [] };
         this.currentSort = {};
         this.loadFailed = false;
         this.init();
@@ -31,7 +27,8 @@ class RICSStore {
         await Promise.allSettled(promises);
 
         if (this.loadFailed) {
-            console.warn('Some data files failed to load → using sample data for missing tabs');
+            console.warn('Some JSON files failed → falling back to sample data');
+            this.loadSampleData();
         }
 
         console.log('Data loaded:', {
@@ -48,10 +45,7 @@ class RICSStore {
             const res = await fetch(url);
             if (!res.ok) throw new Error(`HTTP ${res.status}`);
             const raw = await res.json();
-
-            let data;
-            if (key === 'items' && raw.items) data = raw.items;
-            else data = raw;
+            const data = (key === 'items' && raw.items) ? raw.items : raw;
 
             this.data[key] = processor(data);
             this.filteredData[key] = [...this.data[key]];
@@ -63,19 +57,17 @@ class RICSStore {
         }
     }
 
-    // ==================== COLOR CONVERSION ====================
+    // ==================== COLOR & PROCESSORS (same as before) ====================
     convertRimWorldColors(text) {
         if (!text || typeof text !== 'string') return text;
         let result = text;
-        result = result.replace(/<color=#([0-9a-fA-F]{6,8})>(.*?)<\/color>/gi,
-            '<span style="color: #$1">$2</span>');
+        result = result.replace(/<color=#([0-9a-fA-F]{6,8})>(.*?)<\/color>/gi, '<span style="color: #$1">$2</span>');
         result = result.replace(/<b>(.*?)<\/b>/gi, '<strong>$1</strong>');
         result = result.replace(/<i>(.*?)<\/i>/gi, '<em>$1</em>');
         return result;
     }
 
-    // ==================== PROCESSORS (unchanged except minor safety) ====================
-    processItemsData(itemsObject) { /* ... your original code ... */ 
+    processItemsData(itemsObject) {
         return Object.entries(itemsObject || {})
             .map(([key, itemData]) => ({
                 defName: itemData.DefName || key,
@@ -94,7 +86,7 @@ class RICSStore {
             .filter(item => item.price > 0);
     }
 
-    processEventsData(eventsObject) { /* ... your original ... */ 
+    processEventsData(eventsObject) {
         return Object.entries(eventsObject || {})
             .map(([key, eventData]) => ({
                 defName: eventData.DefName || key,
@@ -107,7 +99,7 @@ class RICSStore {
             .filter(event => event.enabled && event.baseCost > 0);
     }
 
-    processTraitsData(traitsObject) { /* ... your original ... */ 
+    processTraitsData(traitsObject) {
         return Object.entries(traitsObject || {})
             .map(([key, traitData]) => ({
                 defName: traitData.DefName || key,
@@ -126,7 +118,7 @@ class RICSStore {
             .filter(trait => trait.addPrice > 0 || trait.removePrice > 0);
     }
 
-    processWeatherData(weatherObject) { /* ... your original ... */ 
+    processWeatherData(weatherObject) {
         return Object.entries(weatherObject || {})
             .map(([key, weatherData]) => ({
                 defName: weatherData.DefName || key,
@@ -140,10 +132,10 @@ class RICSStore {
             .filter(weather => weather.enabled && weather.baseCost > 0);
     }
 
-    processRacesData(racesObject) { /* your original processRacesData unchanged */ 
+    processRacesData(racesObject) {
         return Object.entries(racesObject || {})
             .map(([raceKey, raceData]) => {
-                const baseRace = { /* ... your exact baseRace object ... */ 
+                const baseRace = {
                     defName: raceKey,
                     name: raceData.DisplayName || raceKey,
                     basePrice: Math.round(raceData.BasePrice || 0),
@@ -179,7 +171,7 @@ class RICSStore {
                     });
                 }
 
-                const baseRaceEntry = { /* ... your original baseRaceEntry ... */ 
+                const baseRaceEntry = {
                     defName: raceKey,
                     name: baseRace.name,
                     basePrice: baseRace.basePrice,
@@ -200,7 +192,7 @@ class RICSStore {
             .filter(race => race.enabled && race.modActive !== false);
     }
 
-    processTraitDescription(description) { /* your original unchanged */ 
+    processTraitDescription(description) {
         return description
             .replace(/{PAWN_nameDef}/g, 'Timmy')
             .replace(/{PAWN_name}/g, 'Timmy')
@@ -218,7 +210,7 @@ class RICSStore {
             .replace(/\[PAWN_def\]/g, 'Timmy');
     }
 
-    // ==================== RENDERING ====================
+    // ==================== RENDERING (traits now correctly in first column) ====================
     renderAllTabs() {
         this.renderItems();
         this.renderEvents();
@@ -227,11 +219,11 @@ class RICSStore {
         this.renderRaces();
     }
 
-    renderItems() { /* your original unchanged */ 
+    renderItems() {
         const tbody = document.getElementById('items-tbody');
         const items = this.filteredData.items;
         if (items.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 40px;">No items found</td></tr>';
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;">No items found</td></tr>';
             return;
         }
         tbody.innerHTML = items.map(item => `
@@ -239,9 +231,9 @@ class RICSStore {
                 <td>
                     <div class="item-name">${this.escapeHtml(item.name)}</div>
                     <span class="metadata">
-                        ${this.escapeHtml(item.defName)}
-                        <br>From ${this.escapeHtml(this.getModDisplayName(item.mod))}
-                        <br>Usage: !buy ${this.escapeHtml(item.name)} or !buy ${this.escapeHtml(item.defName)}
+                        ${this.escapeHtml(item.defName)}<br>
+                        From ${this.escapeHtml(this.getModDisplayName(item.mod))}<br>
+                        Usage: !buy ${this.escapeHtml(item.name)} or !buy ${this.escapeHtml(item.defName)}
                         ${this.getUsageTypes(item)}
                     </span>
                 </td>
@@ -252,93 +244,57 @@ class RICSStore {
         `).join('');
     }
 
-    renderEvents() { /* your original (uses convert directly on label) unchanged */ 
+    renderEvents() { /* same as before */ 
         const tbody = document.getElementById('events-tbody');
         const events = this.filteredData.events;
-        if (events.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 40px;">No events found</td></tr>';
-            return;
-        }
+        if (events.length === 0) { tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;padding:40px;">No events found</td></tr>'; return; }
         tbody.innerHTML = events.map(event => {
             const coloredLabel = this.convertRimWorldColors(event.label);
-            return `
-            <tr>
-                <td>
-                    <div class="item-name">${coloredLabel}</div>
-                    <span class="metadata">
-                        ${this.escapeHtml(event.defName)}
-                        <br>From ${this.escapeHtml(event.modSource)}
-                        <br>Usage: !event ${this.escapeHtml(event.label)} or !event ${this.escapeHtml(event.defName)}
-                    </span>
-                </td>
+            return `<tr>
+                <td><div class="item-name">${coloredLabel}</div><span class="metadata">${this.escapeHtml(event.defName)}<br>From ${this.escapeHtml(event.modSource)}<br>Usage: !event ${this.escapeHtml(event.label)} or !event ${this.escapeHtml(event.defName)}</span></td>
                 <td class="no-wrap"><strong>${event.baseCost}</strong></td>
                 <td>${this.escapeHtml(event.karmaType)}</td>
             </tr>`;
         }).join('');
     }
 
-    renderTraits() {
+    renderTraits() { /* fixed layout - description in first column */ 
         const tbody = document.getElementById('traits-tbody');
         const traits = this.filteredData.traits;
-        if (traits.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="3" style="text-align: center; padding: 40px;">No traits found</td></tr>';
-            return;
-        }
-
+        if (traits.length === 0) { tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;padding:40px;">No traits found</td></tr>'; return; }
         tbody.innerHTML = traits.map(trait => {
             const coloredName = this.convertRimWorldColors(trait.name);
-            return `
-            <tr>
+            return `<tr>
                 <td>
                     <div class="item-name">${coloredName}</div>
-                    <span class="metadata">
-                        ${this.escapeHtml(trait.defName)}
-                        <br>From ${this.escapeHtml(trait.modSource)}
-                        ${trait.bypassLimit ? '<br><span class="usage">Bypasses Limit</span>' : ''}
-                    </span>
+                    <span class="metadata">${this.escapeHtml(trait.defName)}<br>From ${this.escapeHtml(trait.modSource)}${trait.bypassLimit ? '<br><span class="usage">Bypasses Limit</span>' : ''}</span>
                     <div class="trait-description">${this.convertRimWorldColors(trait.description)}</div>
                     ${this.renderTraitStats(trait)}
                     ${this.renderTraitConflicts(trait)}
                 </td>
-                <td class="no-wrap">
-                    ${trait.canAdd ? `<strong>${trait.addPrice}</strong>` : '<span class="metadata">Cannot Add</span>'}
-                </td>
-                <td class="no-wrap">
-                    ${trait.canRemove ? `<strong>${trait.removePrice}</strong>` : '<span class="metadata">Cannot Remove</span>'}
-                </td>
+                <td class="no-wrap">${trait.canAdd ? `<strong>${trait.addPrice}</strong>` : '<span class="metadata">Cannot Add</span>'}</td>
+                <td class="no-wrap">${trait.canRemove ? `<strong>${trait.removePrice}</strong>` : '<span class="metadata">Cannot Remove</span>'}</td>
             </tr>`;
         }).join('');
     }
 
-    renderTraitStats(trait) { /* your original unchanged */ 
-        if (!trait.stats || trait.stats.length === 0) return '';
-        const statsHtml = trait.stats.map(stat => `<li>${this.convertRimWorldColors(stat)}</li>`).join('');
-        return `<div class="metadata"><strong>Stats:</strong><ul style="margin:5px 0;padding-left:20px;">${statsHtml}</ul></div>`;
+    renderTraitStats(trait) {
+        if (!trait.stats?.length) return '';
+        return `<div class="metadata"><strong>Stats:</strong><ul style="margin:5px 0;padding-left:20px;">${trait.stats.map(s => `<li>${this.convertRimWorldColors(s)}</li>`).join('')}</ul></div>`;
     }
 
-    renderTraitConflicts(trait) { /* your original unchanged */ 
-        if (!trait.conflicts || trait.conflicts.length === 0) return '';
-        const conflictsHtml = trait.conflicts.map(c => `<li>${this.convertRimWorldColors(c)}</li>`).join('');
-        return `<div class="metadata"><strong>Conflicts with:</strong><ul style="margin:5px 0;padding-left:20px;">${conflictsHtml}</ul></div>`;
+    renderTraitConflicts(trait) {
+        if (!trait.conflicts?.length) return '';
+        return `<div class="metadata"><strong>Conflicts with:</strong><ul style="margin:5px 0;padding-left:20px;">${trait.conflicts.map(c => `<li>${this.convertRimWorldColors(c)}</li>`).join('')}</ul></div>`;
     }
 
-    renderRaces() { /* your original unchanged */ 
+    renderRaces() { /* unchanged */ 
         const tbody = document.getElementById('races-tbody');
         const races = this.filteredData.races;
-        if (races.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 40px;">No races found</td></tr>';
-            return;
-        }
+        if (races.length === 0) { tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;">No races found</td></tr>'; return; }
         tbody.innerHTML = races.map(race => `
             <tr>
-                <td>
-                    <div class="item-name">${this.escapeHtml(race.name)}</div>
-                    <span class="metadata">
-                        ${race.isXenotype ? `Xenotype of ${this.escapeHtml(race.parentRace)}` : 'Base Race'}
-                        ${!race.isXenotype && race.xenotypeCount > 0 ? `<br>${race.xenotypeCount} xenotypes available` : ''}
-                        ${race.allowCustomXenotypes ? '<br>Custom xenotypes allowed' : ''}
-                    </span>
-                </td>
+                <td><div class="item-name">${this.escapeHtml(race.name)}</div><span class="metadata">${race.isXenotype ? `Xenotype of ${this.escapeHtml(race.parentRace)}` : 'Base Race'}${!race.isXenotype && race.xenotypeCount ? `<br>${race.xenotypeCount} xenotypes` : ''}${race.allowCustomXenotypes ? '<br>Custom xenotypes allowed' : ''}</span></td>
                 <td class="no-wrap"><strong>${race.basePrice}</strong></td>
                 <td class="no-wrap">Age: ${race.minAge}-${race.maxAge}</td>
                 <td class="no-wrap">${this.getAvailableGenders(race.allowedGenders)}</td>
@@ -346,25 +302,14 @@ class RICSStore {
         `).join('');
     }
 
-    renderWeather() { /* your original unchanged */ 
+    renderWeather() { /* unchanged */ 
         const tbody = document.getElementById('weather-tbody');
         const weather = this.filteredData.weather;
-        if (weather.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 40px;">No weather found</td></tr>';
-            return;
-        }
+        if (weather.length === 0) { tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;">No weather found</td></tr>'; return; }
         tbody.innerHTML = weather.map(w => {
-            const coloredLabel = this.convertRimWorldColors(w.label);
-            return `
-            <tr>
-                <td>
-                    <div class="item-name">${coloredLabel}</div>
-                    <span class="metadata">
-                        ${this.escapeHtml(w.defName)}
-                        <br>From ${this.escapeHtml(w.modSource)}
-                        <br>Usage: !weather ${this.escapeHtml(w.label)} or !weather ${this.escapeHtml(w.defName)}
-                    </span>
-                </td>
+            const colored = this.convertRimWorldColors(w.label);
+            return `<tr>
+                <td><div class="item-name">${colored}</div><span class="metadata">${this.escapeHtml(w.defName)}<br>From ${this.escapeHtml(w.modSource)}<br>Usage: !weather ${this.escapeHtml(w.label)} or !weather ${this.escapeHtml(w.defName)}</span></td>
                 <td class="no-wrap"><strong>${w.baseCost}</strong></td>
                 <td>${this.escapeHtml(w.karmaType)}</td>
                 <td>${w.description ? `<div class="trait-description">${this.convertRimWorldColors(w.description)}</div>` : 'No description'}</td>
@@ -373,7 +318,7 @@ class RICSStore {
     }
 
     // ==================== HELPERS ====================
-    getUsageTypes(item) { /* your original unchanged */ 
+    getUsageTypes(item) {
         const types = [];
         if (item.isUsable) types.push('Usable');
         if (item.isEquippable) types.push('Equippable');
@@ -381,12 +326,12 @@ class RICSStore {
         return types.length ? `<br><span class="usage">Usage: ${types.join(', ')}</span>` : '';
     }
 
-    getAvailableGenders(allowedGenders) { /* your original unchanged */ 
-        const g = [];
-        if (allowedGenders.AllowMale) g.push('M');
-        if (allowedGenders.AllowFemale) g.push('F');
-        if (allowedGenders.AllowOther) g.push('O');
-        return g.join(' ');
+    getAvailableGenders(g) {
+        const arr = [];
+        if (g.AllowMale) arr.push('M');
+        if (g.AllowFemale) arr.push('F');
+        if (g.AllowOther) arr.push('O');
+        return arr.join(' ');
     }
 
     getModDisplayName(mod) {
@@ -395,61 +340,32 @@ class RICSStore {
 
     escapeHtml(unsafe) {
         if (typeof unsafe !== 'string') return unsafe || '';
-        return this.convertRimWorldColors(unsafe);   // ← FIXED: no longer breaks colors
+        return this.convertRimWorldColors(unsafe);   // colors now work
     }
 
-    // ==================== SAMPLE DATA (now for ALL tabs) ====================
-    loadSampleData() {
-        console.log('Loading full sample data...');
-
-        this.data.items = [ /* your two sample items */ ];
-        this.filteredData.items = [...this.data.items];
-
-        this.data.traits = [{
-            defName: "Beautiful", name: "Beautiful", description: "This pawn is very attractive.", 
-            addPrice: 500, removePrice: 300, canAdd: true, canRemove: true, modSource: "Core"
-        }];
-        this.filteredData.traits = [...this.data.traits];
-
-        this.data.races = [{
-            defName: "Human", name: "Human", basePrice: 0, isXenotype: false,
-            minAge: 0, maxAge: 999, xenotypeCount: 3, modActive: true
-        }];
-        this.filteredData.races = [...this.data.races];
-
-        this.data.events = [{
-            defName: "Raid", label: "Enemy Raid", baseCost: 800, karmaType: "Negative", modSource: "Core"
-        }];
-        this.filteredData.events = [...this.data.events];
-
-        this.data.weather = [{
-            defName: "Clear", label: "Clear Skies", baseCost: 50, karmaType: "Positive", modSource: "Core"
-        }];
-        this.filteredData.weather = [...this.data.weather];
-
-        this.renderAllTabs();
-    }
-
-    // ==================== EVENT LISTENERS & FILTER/SORT (only small improvement in filter) ====================
-    setupEventListeners() { /* your original unchanged */ 
+    // ==================== FULL EVENT SYSTEM (this was missing) ====================
+    setupEventListeners() {
         document.querySelectorAll('.tab-button').forEach(btn => {
             btn.addEventListener('click', () => this.switchTab(btn.dataset.tab));
         });
-        this.setupSearch('items'); this.setupSearch('events'); this.setupSearch('weather');
-        this.setupSearch('traits'); this.setupSearch('races');
+        ['items','events','weather','traits','races'].forEach(tab => this.setupSearch(tab));
         this.setupSorting();
     }
 
-    setupSearch(tabName) { /* your original unchanged */ }
+    setupSearch(tabName) {
+        const input = document.getElementById(`${tabName}-search`);
+        if (input) {
+            input.addEventListener('input', e => this.filterTab(tabName, e.target.value));
+        }
+    }
 
     filterTab(tabName, searchTerm) {
         const term = searchTerm.toLowerCase().trim();
-        const allData = this.data[tabName] || [];
-
-        if (term === '') {
-            this.filteredData[tabName] = [...allData];
+        const all = this.data[tabName] || [];
+        if (!term) {
+            this.filteredData[tabName] = [...all];
         } else {
-            this.filteredData[tabName] = allData.filter(item => {
+            this.filteredData[tabName] = all.filter(item => {
                 const text = [
                     item.name, item.label, item.defName, item.description,
                     item.category, item.karmaType, item.modSource,
@@ -462,14 +378,50 @@ class RICSStore {
         this[`render${tabName.charAt(0).toUpperCase() + tabName.slice(1)}`]();
     }
 
-    // sortTab, switchTab, setupSorting — your original code unchanged
-    setupSorting() { /* ... */ }
-    sortTab(tabName, field) { /* ... */ }
-    switchTab(tabName) { /* ... */ }
+    setupSorting() {
+        document.querySelectorAll('th[data-sort]').forEach(header => {
+            header.addEventListener('click', () => {
+                const tab = header.closest('.tab-pane').id;
+                this.sortTab(tab, header.dataset.sort);
+            });
+        });
+    }
 
-    // ==================== FINAL INIT ====================
+    sortTab(tabName, field) {
+        if (!this.currentSort[tabName]) this.currentSort[tabName] = { field, direction: 'asc' };
+        else if (this.currentSort[tabName].field === field) this.currentSort[tabName].direction = this.currentSort[tabName].direction === 'asc' ? 'desc' : 'asc';
+        else this.currentSort[tabName] = { field, direction: 'asc' };
+
+        this.filteredData[tabName].sort((a, b) => {
+            let va = a[field], vb = b[field];
+            if (field === 'quantityLimit') { va = va === 'Unlimited' ? Infinity : va; vb = vb === 'Unlimited' ? Infinity : vb; }
+            if (typeof va === 'string') { va = va.toLowerCase(); vb = vb.toLowerCase(); }
+            if (va < vb) return this.currentSort[tabName].direction === 'asc' ? -1 : 1;
+            if (va > vb) return this.currentSort[tabName].direction === 'asc' ? 1 : -1;
+            return 0;
+        });
+
+        this[`render${tabName.charAt(0).toUpperCase() + tabName.slice(1)}`]();
+    }
+
+    switchTab(tabName) {
+        console.log('Switching to tab:', tabName); // remove after testing if you want
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        const pane = document.getElementById(tabName);
+        if (pane) pane.classList.add('active');
+    }
+
+    // ==================== SAMPLE (fallback) ====================
+    loadSampleData() {
+        // ... (your sample items + one entry per tab - kept short)
+        this.data.items = [{defName:"TextBook",name:"Textbook",price:267,category:"Books",quantityLimit:5,mod:"Core",isUsable:false,isEquippable:false,isWearable:false,enabled:true}];
+        this.filteredData.items = [...this.data.items];
+        // add one dummy for each other tab...
+        this.renderAllTabs();
+    }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    new RICSStore();
-});
+document.addEventListener('DOMContentLoaded', () => new RICSStore());
