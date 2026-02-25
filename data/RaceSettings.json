@@ -43,7 +43,15 @@
       "MG_Wolfgirl": 1750.0,
       "Ratkin_Xeno": 1750.0,
       "Wolfein_Xenotype": 1750.0,
-      "Wolfein_Xenotype_PureBlood": 1750.0
+      "Wolfein_Xenotype_PureBlood": 1750.0,
+      "Ratkin_Hamster": 2187.5,
+      "Ratkin_HouseMouse": 1750.0,
+      "Ratkin_LabRat": 1750.0,
+      "Ratkin_Mole": 1750.0,
+      "Ratkin_Squirrel": 1750.0,
+      "Ratkin_Vole": 1750.0,
+      "Ratkin_VolePrototype": 1750.0,
+      "Ratkin_Waster": 1750.0
     },
     "EnabledXenotypes": {
       "Baseliner": true,
@@ -74,7 +82,15 @@
       "MG_Wolfgirl": false,
       "Ratkin_Xeno": true,
       "Wolfein_Xenotype": false,
-      "Wolfein_Xenotype_PureBlood": false
+      "Wolfein_Xenotype_PureBlood": false,
+      "Ratkin_Hamster": false,
+      "Ratkin_HouseMouse": false,
+      "Ratkin_LabRat": false,
+      "Ratkin_Mole": false,
+      "Ratkin_Squirrel": false,
+      "Ratkin_Vole": false,
+      "Ratkin_VolePrototype": false,
+      "Ratkin_Waster": false
     }
   },
   "Alien_Nyaron": {
@@ -1105,7 +1121,7 @@
   },
   "Milian_Race": {
     "DisplayName": "Milian",
-    "Enabled": true,
+    "Enabled": false,
     "ModActive": true,
     "BasePrice": 2500,
     "MinAge": 16,
@@ -1647,18 +1663,18 @@
       "Yttakin": true,
       "Highmate": true,
       "Starjack": true,
-      "Ratkin_Waster": true,
-      "Ratkin_HouseMouse": true,
-      "Ratkin_Mole": true,
-      "Ratkin_LabRat": true,
-      "Ratkin_Hamster": true,
-      "Ratkin_Squirrel": true,
-      "Ratkin_Vole": true,
-      "Ratkin_VolePrototype": true,
-      "Wolfein_Xenotype": true,
-      "Wolfein_Xenotype_PureBlood": true,
-      "Nyaron": true,
-      "NyaronSanguophage": true
+      "Ratkin_Waster": false,
+      "Ratkin_HouseMouse": false,
+      "Ratkin_Mole": false,
+      "Ratkin_LabRat": false,
+      "Ratkin_Hamster": false,
+      "Ratkin_Squirrel": false,
+      "Ratkin_Vole": false,
+      "Ratkin_VolePrototype": false,
+      "Wolfein_Xenotype": false,
+      "Wolfein_Xenotype_PureBlood": false,
+      "Nyaron": false,
+      "NyaronSanguophage": false
     }
   },
   "Ratkin": {
