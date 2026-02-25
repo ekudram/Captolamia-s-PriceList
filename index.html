@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RICS Store - Purchase List</title>
     <link rel="stylesheet" href="assets/css/rics-store.css">
+    <style>
+    /* Minimal tab fix - paste this temporarily */
+    .tab-pane { display: none; padding: 20px; }
+    .tab-pane.active { display: block; }
+    .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+    .tab-button {
+        padding: 12px 20px;
+        background: #eee;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        border-radius: 6px 6px 0 0;
+    }
+    .tab-button.active {
+        background: white;
+        border-bottom: none;
+        font-weight: bold;
+        border: 1px solid #ccc;
+        border-bottom: 2px solid #c00;
+    }
+    .tab-button:hover { background: #f0f0f0; }
+</style>
 </head>
 <body>
     <div class="container">
@@ -136,6 +157,7 @@
 </body>
 
 </html>
+
 
 
 
