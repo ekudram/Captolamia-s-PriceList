@@ -27,8 +27,10 @@ class RICSStore {
         await Promise.allSettled(promises);
 
         if (this.loadFailed) {
-            console.warn('Some JSON files failed → falling back to sample data');
-            this.loadSampleData();
+            const warning = document.createElement('div');
+            warning.style = 'background:#fff3cd; color:#856404; padding:12px; margin:16px; border-radius:6px; text-align:center;';
+            warning.textContent = 'Warning: Some data files failed to load. Some tabs may be incomplete.';
+            document.querySelector('.container').prepend(warning);
         }
 
         console.log('Data loaded:', {
