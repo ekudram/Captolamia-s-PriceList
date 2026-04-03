@@ -334,13 +334,18 @@ header p {
     }
 }
 
+/* Steam Workshop links - matched to your existing red-orange accent (#c44536) and dark header tones */
 .steam-link {
-       color: #1b88e9;
-       text-decoration: underline;
-   }
-   .steam-link:hover {
-       color: #66c0f4;
-   }
+    color: #c44536;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.steam-link:hover {
+    color: #a6382b;           /* darker version of your accent for hover */
+    text-decoration: underline;
+}
 
 /* Custom scrollbar for webkit browsers */
 .table-container::-webkit-scrollbar {
