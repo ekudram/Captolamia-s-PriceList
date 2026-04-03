@@ -21,8 +21,8 @@ class RICSStore {
             this.loadJson('traits', 'data/Traits.json', this.processTraitsData.bind(this)),
             this.loadJson('races', 'data/RaceSettings.json', this.processRacesData.bind(this)),
             this.loadJson('events', 'data/Incidents.json', this.processEventsData.bind(this)),
-            this.loadJson('weather', 'data/Weather.json', this.processWeatherData.bind(this)),
-            this.loadJson('mods', 'data/ActiveMods.json', this.processModsData.bind(this))
+            this.loadJson('weather', 'data/Weather.json', this.processWeatherData.bind(this))
+			this.loadJson('mods', 'data/ActiveMods.json', this.processModsData.bind(this))
         ];
 
         await Promise.allSettled(promises);
