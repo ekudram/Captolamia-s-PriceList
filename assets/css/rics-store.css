@@ -334,6 +334,14 @@ header p {
     }
 }
 
+.steam-link {
+       color: #1b88e9;
+       text-decoration: underline;
+   }
+   .steam-link:hover {
+       color: #66c0f4;
+   }
+
 /* Custom scrollbar for webkit browsers */
 .table-container::-webkit-scrollbar {
     height: 8px;
