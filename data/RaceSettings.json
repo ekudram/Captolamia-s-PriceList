@@ -51,7 +51,8 @@
       "Ratkin_Squirrel": 1750.0,
       "Ratkin_Vole": 1750.0,
       "Ratkin_VolePrototype": 1750.0,
-      "Ratkin_Waster": 1750.0
+      "Ratkin_Waster": 1750.0,
+      "MiliraXenotype": 1750.0
     },
     "EnabledXenotypes": {
       "Baseliner": true,
@@ -90,7 +91,8 @@
       "Ratkin_Squirrel": false,
       "Ratkin_Vole": false,
       "Ratkin_VolePrototype": false,
-      "Ratkin_Waster": false
+      "Ratkin_Waster": false,
+      "MiliraXenotype": true
     }
   },
   "Alien_Nyaron": {
@@ -1747,7 +1749,7 @@
   },
   "Ratkin_Su": {
     "DisplayName": "Ratkin subject",
-    "Enabled": true,
+    "Enabled": false,
     "ModActive": true,
     "BasePrice": 1250,
     "MinAge": 16,
