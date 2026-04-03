@@ -1,8 +1,8 @@
 // assets/js/rics-store.js
 class RICSStore {
     constructor() {
-        this.data = { items: [], events: [], traits: [], races: [], weather: [] };
-        this.filteredData = { items: [], events: [], traits: [], races: [], weather: [] };
+        this.data = { items: [], events: [], traits: [], races: [], weather: [], mods: [] };
+        this.filteredData = { items: [], events: [], traits: [], races: [], weather: [], mods: [] };
         this.currentSort = {};
         this.loadFailed = false;
         this.init();
@@ -22,6 +22,7 @@ class RICSStore {
             this.loadJson('races', 'data/RaceSettings.json', this.processRacesData.bind(this)),
             this.loadJson('events', 'data/Incidents.json', this.processEventsData.bind(this)),
             this.loadJson('weather', 'data/Weather.json', this.processWeatherData.bind(this))
+			this.loadJson('mods', 'data/ActiveMods.json', this.processModsData.bind(this))
         ];
 
         await Promise.allSettled(promises);
@@ -194,6 +195,17 @@ class RICSStore {
             .filter(race => race.enabled && race.modActive !== false);
     }
 
+	processModsData(modsRoot) {
+        if (!modsRoot || !modsRoot.mods) return [];
+        return modsRoot.mods.map(mod => ({
+            name: mod.name || "Unnamed Mod",
+            author: mod.author || "Unknown",
+            steamId: mod.steamId || null,
+            version: mod.version || "—",
+            exportedAt: modsRoot.exportedAt || null
+        }));
+    }
+
     processTraitDescription(description) {
         return description
             .replace(/{PAWN_nameDef}/g, 'Timmy')
@@ -219,6 +231,7 @@ class RICSStore {
         this.renderWeather();
         this.renderTraits();
         this.renderRaces();
+		this.renderMods();
     }
 
     renderItems() {
@@ -260,23 +273,39 @@ class RICSStore {
         }).join('');
     }
 
-    renderTraits() { /* fixed layout - description in first column */ 
+    renderTraits() {
         const tbody = document.getElementById('traits-tbody');
         const traits = this.filteredData.traits;
-        if (traits.length === 0) { tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;padding:40px;">No traits found</td></tr>'; return; }
+        if (traits.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;">No traits found</td></tr>';
+            return;
+        }
+    
         tbody.innerHTML = traits.map(trait => {
             const coloredName = this.convertRimWorldColors(trait.name);
-            return `<tr>
+            return `
+            <tr>
                 <td>
                     <div class="item-name">${coloredName}</div>
-                    <span class="metadata">${this.escapeHtml(trait.defName)}<br>From ${this.escapeHtml(trait.modSource)}${trait.bypassLimit ? '<br><span class="usage">Bypasses Limit</span>' : ''}</span>
+                    <span class="metadata">
+                        ${this.escapeHtml(trait.defName)}
+                        <br>From ${this.escapeHtml(trait.modSource)}
+                        ${trait.bypassLimit ? '<br><span class="usage">Bypasses Limit</span>' : ''}
+                    </span>
+                </td>
+                <td class="no-wrap">
+                    ${trait.canAdd ? `<strong>${trait.addPrice}</strong>` : '<span class="metadata">Cannot Add</span>'}
+                </td>
+                <td class="no-wrap">
+                    ${trait.canRemove ? `<strong>${trait.removePrice}</strong>` : '<span class="metadata">Cannot Remove</span>'}
+                </td>
+                <td>
                     <div class="trait-description">${this.convertRimWorldColors(trait.description)}</div>
                     ${this.renderTraitStats(trait)}
                     ${this.renderTraitConflicts(trait)}
                 </td>
-                <td class="no-wrap">${trait.canAdd ? `<strong>${trait.addPrice}</strong>` : '<span class="metadata">Cannot Add</span>'}</td>
-                <td class="no-wrap">${trait.canRemove ? `<strong>${trait.removePrice}</strong>` : '<span class="metadata">Cannot Remove</span>'}</td>
-            </tr>`;
+            </tr>
+            `;
         }).join('');
     }
 
@@ -319,6 +348,32 @@ class RICSStore {
         }).join('');
     }
 
+    renderMods() {
+        const tbody = document.getElementById('mods-tbody');
+        const mods = this.filteredData.mods;
+        if (mods.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;">No mods exported yet (or ActiveMods.json missing)</td></tr>';
+            return;
+        }
+
+        tbody.innerHTML = mods.map(mod => {
+            let steamLink = '—';
+            if (mod.steamId) {
+                steamLink = `<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=${mod.steamId}" 
+                               target="_blank" rel="noopener" class="steam-link">
+                               Open on Steam Workshop
+                             </a>`;
+            }
+            return `
+                <tr>
+                    <td><div class="item-name">${this.escapeHtml(mod.name)}</div></td>
+                    <td>${this.escapeHtml(mod.author)}</td>
+                    <td class="no-wrap">${this.escapeHtml(mod.version)}</td>
+                    <td>${steamLink}</td>
+                </tr>
+            `;
+        }).join('');
+    }
     // ==================== HELPERS ====================
     getUsageTypes(item) {
         const types = [];
@@ -350,7 +405,7 @@ class RICSStore {
         document.querySelectorAll('.tab-button').forEach(btn => {
             btn.addEventListener('click', () => this.switchTab(btn.dataset.tab));
         });
-        ['items','events','weather','traits','races'].forEach(tab => this.setupSearch(tab));
+        ['items','events','weather','traits','races','mods'].forEach(tab => this.setupSearch(tab));
         this.setupSorting();
     }
 
@@ -368,11 +423,13 @@ class RICSStore {
             this.filteredData[tabName] = [...all];
         } else {
             this.filteredData[tabName] = all.filter(item => {
-                const text = [
+				const text = [
                     item.name, item.label, item.defName, item.description,
                     item.category, item.karmaType, item.modSource,
                     ...(Array.isArray(item.stats) ? item.stats : []),
-                    ...(Array.isArray(item.conflicts) ? item.conflicts : [])
+                    ...(Array.isArray(item.conflicts) ? item.conflicts : []),
+                    // mods tab support
+                    item.author || ''
                 ].join(' ').toLowerCase();
                 return text.includes(term);
             });
