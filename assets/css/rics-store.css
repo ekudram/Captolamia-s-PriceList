@@ -19,7 +19,7 @@ body {
     padding: 20px;
 }
 
-/* Header */
+/* Header - Dark blue */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -42,7 +42,7 @@ header p {
     color: #e1f0fa;
 }
 
-/* Tabs */
+/* Tabs - Orange accent */
 .tabs {
     display: flex;
     background: white;
@@ -65,7 +65,7 @@ header p {
 }
 
 .tab-button:hover {
-    background: #f0f7ff;
+    background: #fff0eb;
     color: #c44536;
 }
 
@@ -207,31 +207,37 @@ header p {
     color: #1e3c5c;
 }
 
-/* Race-specific styles */
-.race-xenotype {
-    background-color: #f8fcff;
-}
-
+/* ==================== RACES COLLAPSIBLE GROUPS - Terra Cotta Orange Theme ==================== */
 .races-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 .race-group {
-    border: 1px solid #444;
-    border-radius: 8px;
-    background: #1e1e1e;
+    border: 1px solid #d9e6f2;
+    border-radius: 12px;
+    background: white;
     overflow: hidden;
+    box-shadow: 0 3px 12px rgba(196, 69, 54, 0.08);
+    transition: all 0.25s ease;
+}
+
+.race-group:hover {
+    box-shadow: 0 6px 18px rgba(196, 69, 54, 0.12);
+    border-color: #e6b5a8;
 }
 
 .race-group summary {
-    padding: 14px 16px;
+    padding: 18px 22px;
     cursor: pointer;
-    background: #2a2a2a;
-    font-weight: bold;
-    list-style: none; /* hides default arrow on some browsers */
+    background: linear-gradient(135deg, #fff4f0 0%, #ffe9e0 100%);
+    font-weight: 600;
+    color: #2c3e50;
+    list-style: none;
     position: relative;
+    border-bottom: 1px solid #f0d9ce;
+    font-size: 1.05rem;
 }
 
 .race-group summary::-webkit-details-marker {
@@ -241,28 +247,63 @@ header p {
 .race-group summary::after {
     content: '▼';
     position: absolute;
-    right: 16px;
-    transition: transform 0.2s;
+    right: 22px;
+    color: #c44536;
+    transition: transform 0.3s ease;
+    font-size: 1.15em;
 }
 
 .race-group[open] summary::after {
     transform: rotate(180deg);
 }
 
+.race-group summary strong {
+    color: #c44536;
+}
+
 .xenotype-list {
-    padding: 12px 20px;
-    background: #252525;
+    padding: 12px 0;
+    background: #fdfaf8;
 }
 
 .xenotype-item {
-    padding: 8px 12px;
-    border-bottom: 1px solid #333;
+    padding: 14px 22px;
+    border-bottom: 1px solid #f0e6df;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.xenotype-item:hover {
+    background: #fff4eb;
 }
 
 .xenotype-item:last-child {
     border-bottom: none;
+}
+
+.xenotype-item strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.xenotype-item .defname {
+    font-size: 0.84rem;
+    color: #8a9eb3;
+    margin-left: 10px;
+}
+
+/* Price in xenotypes - orange accent */
+.xenotype-item > div:last-child {
+    color: #c44536;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* Race-specific legacy styles (kept for safety) */
+.race-xenotype {
+    background-color: #f8fcff;
 }
 
 .race-base {
@@ -283,7 +324,6 @@ header p {
     background: #f5f0f7;
 }
 
-/* Purple metadata styling */
 .metadata .purple-highlight {
     color: #6b4e71;
     font-weight: 500;
@@ -299,11 +339,6 @@ header p {
 .trait-description.purple-text {
     color: #6b4e71;
     font-style: italic;
-}
-
-/* Mobile priority indicators */
-.mobile-priority {
-    display: none;
 }
 
 /* No wrap for important columns */
@@ -331,10 +366,6 @@ header p {
         font-size: 0.9rem;
     }
     
-    .tab-button.active {
-        color: #c44536;
-    }
-    
     .tab-pane {
         padding: 20px;
     }
@@ -351,16 +382,6 @@ header p {
     
     .items-table {
         min-width: 600px;
-    }
-    
-    /* Show priority indicators on mobile */
-    .mobile-priority {
-        display: inline-block;
-        margin-left: 5px;
-    }
-    
-    .mobile-priority.primary::after {
-        content: "💰";
     }
 }
 
@@ -387,7 +408,7 @@ header p {
     }
 }
 
-/* Steam Workshop links - matched to your existing red-orange accent (#c44536) and dark header tones */
+/* Steam Workshop links */
 .steam-link {
     color: #c44536;
     text-decoration: underline;
@@ -396,11 +417,11 @@ header p {
 }
 
 .steam-link:hover {
-    color: #a6382b;           /* darker version of your accent for hover */
+    color: #a6382b;
     text-decoration: underline;
 }
 
-/* Custom scrollbar for webkit browsers */
+/* Custom scrollbar */
 .table-container::-webkit-scrollbar {
     height: 8px;
 }
@@ -417,21 +438,4 @@ header p {
 
 .table-container::-webkit-scrollbar-thumb:hover {
     background: #a6382b;
-}
-
-/* Small purple touch for buttons or accents */
-.purple-dot::before {
-    content: "•";
-    color: #8a6a9c;
-    margin-right: 4px;
-    font-size: 1.2rem;
-    vertical-align: middle;
-}
-
-/* Gradient border option for special sections */
-.purple-orange-gradient {
-    border-image: linear-gradient(45deg, #c44536, #6b4e71) 1;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 8px;
 }
