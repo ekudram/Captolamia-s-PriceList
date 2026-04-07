@@ -6,7 +6,7 @@
     "BasePrice": 1750,
     "MinAge": 16,
     "MaxAge": 65,
-    "AllowCustomXenotypes": true,
+    "AllowCustomXenotypes": false,
     "DefaultXenotype": "Baseliner",
     "PreferredPawnKindDefName": null,
     "AllowedGenders": {
@@ -1236,10 +1236,11 @@
       "Nyaron": 5500.0,
       "NyaronSanguophage": 6875.0,
       "YuranXenotype": 5500.0,
-      "YuranXenotypeBlackSnake": 5500.0
+      "YuranXenotypeBlackSnake": 5500.0,
+      "MiliraXenotype": 5500.0
     },
     "EnabledXenotypes": {
-      "Baseliner": true,
+      "Baseliner": false,
       "Dirtmole": false,
       "Genie": false,
       "Hussar": false,
@@ -1266,7 +1267,8 @@
       "Nyaron": false,
       "NyaronSanguophage": false,
       "YuranXenotype": false,
-      "YuranXenotypeBlackSnake": false
+      "YuranXenotypeBlackSnake": false,
+      "MiliraXenotype": true
     }
   },
   "Alien_Moyo": {
@@ -1650,7 +1652,8 @@
       "Wolfein_Xenotype": 1750.0,
       "Wolfein_Xenotype_PureBlood": 1750.0,
       "Nyaron": 1750.0,
-      "NyaronSanguophage": 2187.5
+      "NyaronSanguophage": 2187.5,
+      "MiliraXenotype": 1750.0
     },
     "EnabledXenotypes": {
       "Baseliner": true,
@@ -1676,7 +1679,8 @@
       "Wolfein_Xenotype": false,
       "Wolfein_Xenotype_PureBlood": false,
       "Nyaron": false,
-      "NyaronSanguophage": false
+      "NyaronSanguophage": false,
+      "MiliraXenotype": false
     }
   },
   "Ratkin": {
