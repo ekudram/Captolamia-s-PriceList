@@ -111,27 +111,16 @@
                 </div>
             </div>
 
-            <!-- Races Tab -->
-            <div id="races" class="tab-pane">
-                <div class="search-box">
-                    <input type="text" id="races-search" placeholder="Search races and xenotypes..." class="search-input">
-                </div>
-                <div class="table-container">
-                    <table id="races-table" class="items-table">
-                        <thead>
-                            <tr>
-                                <th data-sort="name">Name</th>
-                                <th data-sort="basePrice">Price</th>
-                                <th data-sort="minAge">Age Range</th>
-                                <th>Genders</th>
-                            </tr>
-                        </thead>
-                        <tbody id="races-tbody">
-                            <!-- Races loaded by JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+			<!-- Races Tab -->
+			<div id="races" class="tab-pane">
+				<div class="search-box">
+					<input type="text" id="races-search" placeholder="Search races and xenotypes..." class="search-input">
+				</div>
+				
+				<div id="races-container" class="races-container">
+					<!-- Populated by JavaScript with collapsible groups -->
+				</div>
+			</div>
 			<!-- Mods Tab -->
             <div id="mods" class="tab-pane">
                 <div class="search-box">

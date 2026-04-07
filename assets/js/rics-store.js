@@ -136,65 +136,55 @@ class RICSStore {
             .filter(weather => weather.enabled && weather.baseCost > 0);
     }
 
-    processRacesData(racesObject) {
-        return Object.entries(racesObject || {})
-            .map(([raceKey, raceData]) => {
-                const baseRace = {
-                    defName: raceKey,
-                    name: raceData.DisplayName || raceKey,
-                    basePrice: Math.round(raceData.BasePrice || 0),
-                    minAge: raceData.MinAge || 0,
-                    maxAge: raceData.MaxAge || 0,
-                    allowCustomXenotypes: raceData.AllowCustomXenotypes || false,
-                    defaultXenotype: raceData.DefaultXenotype || 'None',
-                    enabled: raceData.Enabled !== false,
-                    modActive: raceData.ModActive !== false,
-                    allowedGenders: raceData.AllowedGenders || {},
-                    xenotypePrices: raceData.XenotypePrices || {},
-                    enabledXenotypes: raceData.EnabledXenotypes || {}
-                };
+processRacesData(racesObject) {
+    const grouped = {};
 
-                const xenotypeEntries = [];
-                if (baseRace.enabledXenotypes) {
-                    Object.entries(baseRace.enabledXenotypes).forEach(([xenotype, isEnabled]) => {
-                        if (isEnabled && baseRace.xenotypePrices[xenotype] !== undefined) {
-                            xenotypeEntries.push({
-                                defName: `${raceKey}_${xenotype}`,
-                                name: `${baseRace.name} ${xenotype}`,
-                                basePrice: Math.round(baseRace.xenotypePrices[xenotype]),
-                                isXenotype: true,
-                                parentRace: baseRace.name,
-                                xenotype: xenotype,
-                                minAge: baseRace.minAge,
-                                maxAge: baseRace.maxAge,
-                                enabled: true,
-                                modActive: baseRace.modActive,
-                                allowedGenders: baseRace.allowedGenders
-                            });
-                        }
+    Object.entries(racesObject || {}).forEach(([raceKey, raceData]) => {
+        const baseRace = {
+            defName: raceKey,
+            name: raceData.DisplayName || raceKey,
+            basePrice: Math.round(raceData.BasePrice || 0),
+            minAge: raceData.MinAge || 0,
+            maxAge: raceData.MaxAge || 0,
+            allowCustomXenotypes: raceData.AllowCustomXenotypes || false,
+            defaultXenotype: raceData.DefaultXenotype || 'None',
+            enabled: raceData.Enabled !== false,
+            modActive: raceData.ModActive !== false,
+            allowedGenders: raceData.AllowedGenders || {},
+            xenotypePrices: raceData.XenotypePrices || {},
+            enabledXenotypes: raceData.EnabledXenotypes || {}
+        };
+
+        if (!baseRace.enabled || baseRace.modActive === false) return;
+
+        if (!grouped[raceKey]) {
+            grouped[raceKey] = {
+                ...baseRace,
+                isBaseRace: true,
+                xenotypes: []
+            };
+        }
+
+        // Add enabled xenotypes
+        if (baseRace.enabledXenotypes) {
+            Object.entries(baseRace.enabledXenotypes).forEach(([xenotype, isEnabled]) => {
+                if (isEnabled && baseRace.xenotypePrices[xenotype] !== undefined) {
+                    grouped[raceKey].xenotypes.push({
+                        defName: `${raceKey}_${xenotype}`,
+                        name: xenotype,
+                        basePrice: Math.round(baseRace.xenotypePrices[xenotype]),
+                        isXenotype: true,
+                        parentRace: baseRace.name
                     });
                 }
+            });
+        }
+    });
 
-                const baseRaceEntry = {
-                    defName: raceKey,
-                    name: baseRace.name,
-                    basePrice: baseRace.basePrice,
-                    isXenotype: false,
-                    minAge: baseRace.minAge,
-                    maxAge: baseRace.maxAge,
-                    allowCustomXenotypes: baseRace.allowCustomXenotypes,
-                    defaultXenotype: baseRace.defaultXenotype,
-                    enabled: baseRace.enabled,
-                    modActive: baseRace.modActive,
-                    xenotypeCount: xenotypeEntries.length,
-                    allowedGenders: baseRace.allowedGenders
-                };
-
-                return [baseRaceEntry, ...xenotypeEntries];
-            })
-            .flat()
-            .filter(race => race.enabled && race.modActive !== false);
-    }
+    // Convert to array and sort base races alphabetically
+    return Object.values(grouped)
+        .sort((a, b) => a.name.localeCompare(b.name));
+}
 
 	processModsData(modsRoot) {
         if (!modsRoot || !modsRoot.mods) return [];
@@ -320,19 +310,55 @@ class RICSStore {
         return `<div class="metadata"><strong>Conflicts with:</strong><ul style="margin:5px 0;padding-left:20px;">${trait.conflicts.map(c => `<li>${this.convertRimWorldColors(c)}</li>`).join('')}</ul></div>`;
     }
 
-    renderRaces() { /* unchanged */ 
-        const tbody = document.getElementById('races-tbody');
-        const races = this.filteredData.races;
-        if (races.length === 0) { tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;">No races found</td></tr>'; return; }
-        tbody.innerHTML = races.map(race => `
-            <tr>
-                <td><div class="item-name">${this.escapeHtml(race.name)}</div><span class="metadata">${race.isXenotype ? `Xenotype of ${this.escapeHtml(race.parentRace)}` : 'Base Race'}${!race.isXenotype && race.xenotypeCount ? `<br>${race.xenotypeCount} xenotypes` : ''}${race.allowCustomXenotypes ? '<br>Custom xenotypes allowed' : ''}</span></td>
-                <td class="no-wrap"><strong>${race.basePrice}</strong></td>
-                <td class="no-wrap">Age: ${race.minAge}-${race.maxAge}</td>
-                <td class="no-wrap">${this.getAvailableGenders(race.allowedGenders)}</td>
-            </tr>
-        `).join('');
-    }
+	renderRaces() {
+		const container = document.getElementById('races-container');
+		const races = this.filteredData.races;   // now grouped base races
+
+		if (races.length === 0) {
+			container.innerHTML = '<div style="text-align:center;padding:40px;">No races found</div>';
+			return;
+		}
+
+		let html = '';
+
+		races.forEach(race => {
+			const genders = this.getAvailableGenders(race.allowedGenders);
+			const ageRange = `Age: ${race.minAge}-${race.maxAge === 999999 ? '∞' : race.maxAge}`;
+
+			html += `
+				<details class="race-group" open>
+					<summary>
+						<strong>${this.escapeHtml(race.name)}</strong> 
+						— Price: <strong>${race.basePrice}</strong> 
+						• ${ageRange}
+						${genders ? ` • Genders: ${genders}` : ''}
+						${race.allowCustomXenotypes ? ' • Custom xenotypes allowed' : ''}
+						${race.xenotypes.length ? ` (${race.xenotypes.length} xenotypes)` : ''}
+					</summary>
+					<div class="xenotype-list">
+			`;
+
+			if (race.xenotypes.length === 0) {
+				html += `<div style="padding:12px;color:#888;">No xenotypes available for this race.</div>`;
+			} else {
+				race.xenotypes.forEach(xeno => {
+					html += `
+						<div class="xenotype-item">
+							<div>
+								<strong>${this.escapeHtml(xeno.name)}</strong>
+								<span style="color:#888; font-size:0.9em;"> (${xeno.defName})</span>
+							</div>
+							<div style="color:#4ade80; font-weight:bold;">${xeno.basePrice}</div>
+						</div>
+					`;
+				});
+			}
+
+			html += `</div></details>`;
+		});
+
+		container.innerHTML = html;
+	}
 
     renderWeather() { /* unchanged */ 
         const tbody = document.getElementById('weather-tbody');
