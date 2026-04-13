@@ -6,7 +6,7 @@
     "BasePrice": 1750,
     "MinAge": 16,
     "MaxAge": 65,
-    "AllowCustomXenotypes": false,
+    "AllowCustomXenotypes": true,
     "DefaultXenotype": "Baseliner",
     "PreferredPawnKindDefName": null,
     "AllowedGenders": {
@@ -1653,7 +1653,8 @@
       "Wolfein_Xenotype_PureBlood": 1750.0,
       "Nyaron": 1750.0,
       "NyaronSanguophage": 2187.5,
-      "MiliraXenotype": 1750.0
+      "MiliraXenotype": 1750.0,
+      "Ratkin_Xeno": 1750.0
     },
     "EnabledXenotypes": {
       "Baseliner": true,
@@ -1680,7 +1681,8 @@
       "Wolfein_Xenotype_PureBlood": false,
       "Nyaron": false,
       "NyaronSanguophage": false,
-      "MiliraXenotype": false
+      "MiliraXenotype": false,
+      "Ratkin_Xeno": true
     }
   },
   "Ratkin": {

@@ -3627,7 +3627,7 @@
       "Mod": "Core",
       "BasePrice": 700,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Bear_Polar": {
@@ -3642,7 +3642,7 @@
       "Mod": "Core",
       "BasePrice": 700,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Ostrich": {
@@ -3657,7 +3657,7 @@
       "Mod": "Core",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Emu": {
@@ -3672,7 +3672,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Cassowary": {
@@ -3687,7 +3687,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Cougar": {
@@ -3702,7 +3702,7 @@
       "Mod": "Core",
       "BasePrice": 400,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Panther": {
@@ -3717,7 +3717,7 @@
       "Mod": "Core",
       "BasePrice": 400,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Lynx": {
@@ -3732,7 +3732,7 @@
       "Mod": "Core",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Cat": {
@@ -3747,7 +3747,7 @@
       "Mod": "Core",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "YorkshireTerrier": {
@@ -3762,7 +3762,7 @@
       "Mod": "Core",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "GuineaPig": {
@@ -3777,7 +3777,7 @@
       "Mod": "Core",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "LabradorRetriever": {
@@ -3792,7 +3792,7 @@
       "Mod": "Core",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Husky": {
@@ -3807,7 +3807,7 @@
       "Mod": "Core",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Monkey": {
@@ -3822,7 +3822,7 @@
       "Mod": "Core",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Chicken": {
@@ -3837,7 +3837,7 @@
       "Mod": "Core",
       "BasePrice": 50,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Duck": {
@@ -3852,7 +3852,7 @@
       "Mod": "Core",
       "BasePrice": 60,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Turkey": {
@@ -3867,7 +3867,7 @@
       "Mod": "Core",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Goose": {
@@ -3882,7 +3882,7 @@
       "Mod": "Core",
       "BasePrice": 90,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Cow": {
@@ -3897,7 +3897,7 @@
       "Mod": "Core",
       "BasePrice": 300,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Boomalope": {
@@ -3912,7 +3912,7 @@
       "Mod": "Core",
       "BasePrice": 350,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Muffalo": {
@@ -3927,7 +3927,7 @@
       "Mod": "Core",
       "BasePrice": 300,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Bison": {
@@ -3942,7 +3942,7 @@
       "Mod": "Core",
       "BasePrice": 350,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Dromedary": {
@@ -3957,7 +3957,7 @@
       "Mod": "Core",
       "BasePrice": 300,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Goat": {
@@ -3972,7 +3972,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Elk": {
@@ -3987,7 +3987,7 @@
       "Mod": "Core",
       "BasePrice": 300,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Yak": {
@@ -4002,7 +4002,7 @@
       "Mod": "Core",
       "BasePrice": 320,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Caribou": {
@@ -4017,7 +4017,7 @@
       "Mod": "Core",
       "BasePrice": 300,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Horse": {
@@ -4032,7 +4032,7 @@
       "Mod": "Core",
       "BasePrice": 550,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Donkey": {
@@ -4047,7 +4047,7 @@
       "Mod": "Core",
       "BasePrice": 320,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Elephant": {
@@ -4062,7 +4062,7 @@
       "Mod": "Core",
       "BasePrice": 600,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Rhinoceros": {
@@ -4077,7 +4077,7 @@
       "Mod": "Core",
       "BasePrice": 700,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Hare": {
@@ -4092,7 +4092,7 @@
       "Mod": "Core",
       "BasePrice": 50,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Snowhare": {
@@ -4107,7 +4107,7 @@
       "Mod": "Core",
       "BasePrice": 50,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Megascarab": {
@@ -4122,7 +4122,7 @@
       "Mod": "Core",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Spelopede": {
@@ -4137,7 +4137,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Megaspider": {
@@ -4152,7 +4152,7 @@
       "Mod": "Core",
       "BasePrice": 500,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Thrumbo": {
@@ -4167,7 +4167,7 @@
       "Mod": "Core",
       "BasePrice": 4000,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Cobra": {
@@ -4182,7 +4182,7 @@
       "Mod": "Core",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Tortoise": {
@@ -4197,7 +4197,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Alphabeaver": {
@@ -4212,7 +4212,7 @@
       "Mod": "Core",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Pig": {
@@ -4227,7 +4227,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "WildBoar": {
@@ -4242,7 +4242,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Ibex": {
@@ -4257,7 +4257,7 @@
       "Mod": "Core",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Deer": {
@@ -4272,7 +4272,7 @@
       "Mod": "Core",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Gazelle": {
@@ -4287,7 +4287,7 @@
       "Mod": "Core",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Chinchilla": {
@@ -4302,7 +4302,7 @@
       "Mod": "Core",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Sheep": {
@@ -4317,7 +4317,7 @@
       "Mod": "Core",
       "BasePrice": 210,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Alpaca": {
@@ -4332,7 +4332,7 @@
       "Mod": "Core",
       "BasePrice": 350,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Megasloth": {
@@ -4347,7 +4347,7 @@
       "Mod": "Core",
       "BasePrice": 700,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Capybara": {
@@ -4362,7 +4362,7 @@
       "Mod": "Core",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Squirrel": {
@@ -4377,7 +4377,7 @@
       "Mod": "Core",
       "BasePrice": 35,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Rat": {
@@ -4392,7 +4392,7 @@
       "Mod": "Core",
       "BasePrice": 35,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Boomrat": {
@@ -4407,7 +4407,7 @@
       "Mod": "Core",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Raccoon": {
@@ -4422,7 +4422,7 @@
       "Mod": "Core",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Iguana": {
@@ -4437,7 +4437,7 @@
       "Mod": "Core",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Warg": {
@@ -4452,7 +4452,7 @@
       "Mod": "Core",
       "BasePrice": 450,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Wolf_Timber": {
@@ -4467,7 +4467,7 @@
       "Mod": "Core",
       "BasePrice": 350,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Wolf_Arctic": {
@@ -4482,7 +4482,7 @@
       "Mod": "Core",
       "BasePrice": 350,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Fox_Fennec": {
@@ -4497,7 +4497,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Fox_Red": {
@@ -4512,7 +4512,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Fox_Arctic": {
@@ -4527,7 +4527,7 @@
       "Mod": "Core",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Mech_CentipedeBlaster": {
@@ -8547,7 +8547,7 @@
       "Mod": "Biotech",
       "BasePrice": 35,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Toxalope": {
@@ -8562,7 +8562,7 @@
       "Mod": "Biotech",
       "BasePrice": 350,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Mech_Tunneler": {
@@ -11157,7 +11157,7 @@
       "Mod": "Odyssey",
       "BasePrice": 220,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "MonitorLizard": {
@@ -11172,7 +11172,7 @@
       "Mod": "Odyssey",
       "BasePrice": 175,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "PrairieDog": {
@@ -11187,7 +11187,7 @@
       "Mod": "Odyssey",
       "BasePrice": 30,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Porcupine": {
@@ -11202,7 +11202,7 @@
       "Mod": "Odyssey",
       "BasePrice": 35,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Mastodon": {
@@ -11217,7 +11217,7 @@
       "Mod": "Odyssey",
       "BasePrice": 740,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Cat_Scimitar": {
@@ -11232,7 +11232,7 @@
       "Mod": "Odyssey",
       "BasePrice": 500,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Wolverine": {
@@ -11247,7 +11247,7 @@
       "Mod": "Odyssey",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Wolf_Great": {
@@ -11262,7 +11262,7 @@
       "Mod": "Odyssey",
       "BasePrice": 500,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Moose": {
@@ -11277,7 +11277,7 @@
       "Mod": "Odyssey",
       "BasePrice": 375,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "AlphaThrumbo": {
@@ -11292,7 +11292,7 @@
       "Mod": "Odyssey",
       "BasePrice": 7000,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Muskox": {
@@ -11307,7 +11307,7 @@
       "Mod": "Odyssey",
       "BasePrice": 370,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Tiger": {
@@ -11322,7 +11322,7 @@
       "Mod": "Odyssey",
       "BasePrice": 450,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Mink": {
@@ -11337,7 +11337,7 @@
       "Mod": "Odyssey",
       "BasePrice": 160,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Gorilla": {
@@ -11352,7 +11352,7 @@
       "Mod": "Odyssey",
       "BasePrice": 600,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Badger": {
@@ -11367,7 +11367,7 @@
       "Mod": "Odyssey",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Panda": {
@@ -11382,7 +11382,7 @@
       "Mod": "Odyssey",
       "BasePrice": 400,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Hippo": {
@@ -11397,7 +11397,7 @@
       "Mod": "Odyssey",
       "BasePrice": 600,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Megavole": {
@@ -11412,7 +11412,7 @@
       "Mod": "Odyssey",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Armadillo": {
@@ -11427,7 +11427,7 @@
       "Mod": "Odyssey",
       "BasePrice": 100,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Alligator": {
@@ -11442,7 +11442,7 @@
       "Mod": "Odyssey",
       "BasePrice": 350,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Bullfrog": {
@@ -11457,7 +11457,7 @@
       "Mod": "Odyssey",
       "BasePrice": 60,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "ColossusToad": {
@@ -11472,7 +11472,7 @@
       "Mod": "Odyssey",
       "BasePrice": 220,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "LavaSnail": {
@@ -11487,7 +11487,7 @@
       "Mod": "Odyssey",
       "BasePrice": 180,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Sparrow": {
@@ -11502,7 +11502,7 @@
       "Mod": "Odyssey",
       "BasePrice": 30,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Crow": {
@@ -11517,7 +11517,7 @@
       "Mod": "Odyssey",
       "BasePrice": 30,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Bluebird": {
@@ -11532,7 +11532,7 @@
       "Mod": "Odyssey",
       "BasePrice": 30,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Quail": {
@@ -11547,7 +11547,7 @@
       "Mod": "Odyssey",
       "BasePrice": 30,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Macaw": {
@@ -11562,7 +11562,7 @@
       "Mod": "Odyssey",
       "BasePrice": 90,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Flamingo": {
@@ -11577,7 +11577,7 @@
       "Mod": "Odyssey",
       "BasePrice": 120,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Heron": {
@@ -11592,7 +11592,7 @@
       "Mod": "Odyssey",
       "BasePrice": 120,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Swan": {
@@ -11607,7 +11607,7 @@
       "Mod": "Odyssey",
       "BasePrice": 200,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Peacock": {
@@ -11622,7 +11622,7 @@
       "Mod": "Odyssey",
       "BasePrice": 180,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Vulture": {
@@ -11637,7 +11637,7 @@
       "Mod": "Odyssey",
       "BasePrice": 120,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Penguin": {
@@ -11652,7 +11652,7 @@
       "Mod": "Odyssey",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Walrus": {
@@ -11667,7 +11667,7 @@
       "Mod": "Odyssey",
       "BasePrice": 300,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "SeaLion": {
@@ -11682,7 +11682,7 @@
       "Mod": "Odyssey",
       "BasePrice": 320,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Seal": {
@@ -11697,7 +11697,7 @@
       "Mod": "Odyssey",
       "BasePrice": 290,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "HermitCrab": {
@@ -11712,7 +11712,7 @@
       "Mod": "Odyssey",
       "BasePrice": 60,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "StoneCrab": {
@@ -11727,7 +11727,7 @@
       "Mod": "Odyssey",
       "BasePrice": 80,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "SeaTurtle": {
@@ -11742,7 +11742,7 @@
       "Mod": "Odyssey",
       "BasePrice": 250,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Otter": {
@@ -11757,7 +11757,7 @@
       "Mod": "Odyssey",
       "BasePrice": 60,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Larva": {
@@ -11772,7 +11772,7 @@
       "Mod": "Odyssey",
       "BasePrice": 35,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "HiveQueen": {
@@ -11787,7 +11787,7 @@
       "Mod": "Odyssey",
       "BasePrice": 2000,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Locust": {
@@ -11802,7 +11802,7 @@
       "Mod": "Odyssey",
       "BasePrice": 120,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "Drone_Hunter": {
@@ -11982,7 +11982,7 @@
       "Mod": "Vanilla Psycasts Expanded",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "VPE_RockConstruct": {
@@ -11997,7 +11997,7 @@
       "Mod": "Vanilla Psycasts Expanded",
       "BasePrice": 150,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "VPE_MeleeWeapon_EltexDagger": {
@@ -25572,7 +25572,7 @@
       "Mod": "NewRatkinPlus[1.6]",
       "BasePrice": 450,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "RK_Leather_KingHamster": {
@@ -25617,7 +25617,7 @@
       "Mod": "NewRatkinPlus[1.6]",
       "BasePrice": 400,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "RK_ApronSkirt": {
@@ -30819,7 +30819,7 @@
       "IsUsable": false,
       "IsEquippable": true,
       "IsWearable": false,
-      "Mod": "Wolfein Imperial Weapons (WIP)",
+      "Mod": "Wolfein Imperial Weapons",
       "BasePrice": 1260,
       "Category": "Weapon",
       "Enabled": true,
@@ -30834,7 +30834,7 @@
       "IsUsable": false,
       "IsEquippable": true,
       "IsWearable": false,
-      "Mod": "Wolfein Imperial Weapons (WIP)",
+      "Mod": "Wolfein Imperial Weapons",
       "BasePrice": 4370,
       "Category": "Weapon",
       "Enabled": true,
@@ -30849,7 +30849,7 @@
       "IsUsable": false,
       "IsEquippable": true,
       "IsWearable": false,
-      "Mod": "Wolfein Imperial Weapons (WIP)",
+      "Mod": "Wolfein Imperial Weapons",
       "BasePrice": 6315,
       "Category": "Weapon",
       "Enabled": true,
@@ -30864,7 +30864,7 @@
       "IsUsable": false,
       "IsEquippable": true,
       "IsWearable": false,
-      "Mod": "Wolfein Imperial Weapons (WIP)",
+      "Mod": "Wolfein Imperial Weapons",
       "BasePrice": 8170,
       "Category": "Weapon",
       "Enabled": true,
@@ -30879,7 +30879,7 @@
       "IsUsable": false,
       "IsEquippable": true,
       "IsWearable": false,
-      "Mod": "Wolfein Imperial Weapons (WIP)",
+      "Mod": "Wolfein Imperial Weapons",
       "BasePrice": 9260,
       "Category": "Weapon",
       "Enabled": true,
@@ -30894,7 +30894,7 @@
       "IsUsable": false,
       "IsEquippable": true,
       "IsWearable": false,
-      "Mod": "Wolfein Imperial Weapons (WIP)",
+      "Mod": "Wolfein Imperial Weapons",
       "BasePrice": 6850,
       "Category": "Weapon",
       "Enabled": true,
@@ -30909,7 +30909,7 @@
       "IsUsable": false,
       "IsEquippable": true,
       "IsWearable": false,
-      "Mod": "Wolfein Imperial Weapons (WIP)",
+      "Mod": "Wolfein Imperial Weapons",
       "BasePrice": 660,
       "Category": "Weapon",
       "Enabled": true,
@@ -33732,7 +33732,7 @@
       "Mod": "[L] House Maid Nukos 1.6",
       "BasePrice": 1000,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "SeniorMaidnukos": {
@@ -33747,7 +33747,7 @@
       "Mod": "[L] House Maid Nukos 1.6",
       "BasePrice": 1300,
       "Category": "Animals",
-      "Enabled": true,
+      "Enabled": false,
       "modactive": true
     },
     "RockMill": {
@@ -42252,6 +42252,126 @@
       "Mod": "SimpleBabyCarry",
       "BasePrice": 105,
       "Category": "Apparel",
+      "Enabled": true,
+      "modactive": true
+    },
+    "SBC_KidBabyCarrier": {
+      "DefName": "SBC_KidBabyCarrier",
+      "CustomName": "Kid's baby carrier",
+      "HasQuantityLimit": true,
+      "QuantityLimit": 1,
+      "LimitMode": "OneStack",
+      "IsUsable": false,
+      "IsEquippable": false,
+      "IsWearable": true,
+      "Mod": "SimpleBabyCarry",
+      "BasePrice": 55,
+      "Category": "Children's Apparel",
+      "Enabled": true,
+      "modactive": true
+    },
+    "SBC_KidClothBabySling": {
+      "DefName": "SBC_KidClothBabySling",
+      "CustomName": "Kid's cloth baby sling",
+      "HasQuantityLimit": true,
+      "QuantityLimit": 1,
+      "LimitMode": "OneStack",
+      "IsUsable": false,
+      "IsEquippable": false,
+      "IsWearable": true,
+      "Mod": "SimpleBabyCarry",
+      "BasePrice": 32,
+      "Category": "Children's Apparel",
+      "Enabled": true,
+      "modactive": true
+    },
+    "SBC_KidTribalBabySling": {
+      "DefName": "SBC_KidTribalBabySling",
+      "CustomName": "Kid's tribal baby sling",
+      "HasQuantityLimit": true,
+      "QuantityLimit": 1,
+      "LimitMode": "OneStack",
+      "IsUsable": false,
+      "IsEquippable": false,
+      "IsWearable": true,
+      "Mod": "SimpleBabyCarry",
+      "BasePrice": 53,
+      "Category": "Children's Apparel",
+      "Enabled": true,
+      "modactive": true
+    },
+    "VGE_CompactBiosculpterPod": {
+      "DefName": "VGE_CompactBiosculpterPod",
+      "CustomName": "Compact biosculpter pod",
+      "HasQuantityLimit": true,
+      "QuantityLimit": 1,
+      "LimitMode": "OneStack",
+      "IsUsable": false,
+      "IsEquippable": false,
+      "IsWearable": false,
+      "Mod": "Vanilla Gravship Expanded - Chapter 1",
+      "BasePrice": 270,
+      "Category": "Misc",
+      "Enabled": true,
+      "modactive": true
+    },
+    "VGE_CompactGeneBank": {
+      "DefName": "VGE_CompactGeneBank",
+      "CustomName": "Compact gene bank",
+      "HasQuantityLimit": true,
+      "QuantityLimit": 1,
+      "LimitMode": "OneStack",
+      "IsUsable": false,
+      "IsEquippable": false,
+      "IsWearable": false,
+      "Mod": "Vanilla Gravship Expanded - Chapter 1",
+      "BasePrice": 120,
+      "Category": "Production",
+      "Enabled": true,
+      "modactive": true
+    },
+    "VGE_WallToolCabinet": {
+      "DefName": "VGE_WallToolCabinet",
+      "CustomName": "Wall tool cabinet",
+      "HasQuantityLimit": true,
+      "QuantityLimit": 1,
+      "LimitMode": "OneStack",
+      "IsUsable": false,
+      "IsEquippable": false,
+      "IsWearable": false,
+      "Mod": "Vanilla Gravship Expanded - Chapter 1",
+      "BasePrice": 290,
+      "Category": "Misc",
+      "Enabled": true,
+      "modactive": true
+    },
+    "VGE_CompactResearchBench": {
+      "DefName": "VGE_CompactResearchBench",
+      "CustomName": "Compact research bench",
+      "HasQuantityLimit": true,
+      "QuantityLimit": 1,
+      "LimitMode": "OneStack",
+      "IsUsable": false,
+      "IsEquippable": false,
+      "IsWearable": false,
+      "Mod": "Vanilla Gravship Expanded - Chapter 1",
+      "BasePrice": 1100,
+      "Category": "Production",
+      "Enabled": true,
+      "modactive": true
+    },
+    "VGE_CompactMultiAnalyzer": {
+      "DefName": "VGE_CompactMultiAnalyzer",
+      "CustomName": "Compact multi-analyzer",
+      "HasQuantityLimit": true,
+      "QuantityLimit": 1,
+      "LimitMode": "OneStack",
+      "IsUsable": false,
+      "IsEquippable": false,
+      "IsWearable": false,
+      "Mod": "Vanilla Gravship Expanded - Chapter 1",
+      "BasePrice": 720,
+      "Category": "Misc",
       "Enabled": true,
       "modactive": true
     }
