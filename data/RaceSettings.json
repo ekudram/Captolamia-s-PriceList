@@ -98,7 +98,7 @@
   "Alien_Nyaron": {
     "DisplayName": "Nyaron",
     "Enabled": true,
-    "ModActive": true,
+    "ModActive": false,
     "BasePrice": 3000,
     "MinAge": 16,
     "MaxAge": 65,
@@ -1124,7 +1124,7 @@
   "Milian_Race": {
     "DisplayName": "Milian",
     "Enabled": false,
-    "ModActive": true,
+    "ModActive": false,
     "BasePrice": 2500,
     "MinAge": 16,
     "MaxAge": 65,
@@ -1196,7 +1196,7 @@
   "Milira_Race": {
     "DisplayName": "Milira",
     "Enabled": true,
-    "ModActive": true,
+    "ModActive": false,
     "BasePrice": 5500,
     "MinAge": 16,
     "MaxAge": 65,
@@ -1562,7 +1562,7 @@
   "Wolfein_Race": {
     "DisplayName": "Wolfein race",
     "Enabled": true,
-    "ModActive": true,
+    "ModActive": false,
     "BasePrice": 2000,
     "MinAge": 16,
     "MaxAge": 65,
@@ -1616,7 +1616,7 @@
   "Kurin_Race": {
     "DisplayName": "Kurin",
     "Enabled": true,
-    "ModActive": true,
+    "ModActive": false,
     "BasePrice": 1750,
     "MinAge": 16,
     "MaxAge": 65,
@@ -1688,7 +1688,7 @@
   "Ratkin": {
     "DisplayName": "Ratkin",
     "Enabled": true,
-    "ModActive": true,
+    "ModActive": false,
     "BasePrice": 1250,
     "MinAge": 16,
     "MaxAge": 65,
@@ -1756,7 +1756,7 @@
   "Ratkin_Su": {
     "DisplayName": "Ratkin subject",
     "Enabled": false,
-    "ModActive": true,
+    "ModActive": false,
     "BasePrice": 1250,
     "MinAge": 16,
     "MaxAge": 65,

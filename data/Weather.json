@@ -188,7 +188,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Vanilla Psycasts Expanded",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   },
   "Windy": {
@@ -212,7 +212,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Seasonal Weather (Continued)",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   },
   "FogSnow": {
@@ -224,7 +224,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Seasonal Weather (Continued)",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   },
   "Dust": {
@@ -236,7 +236,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Seasonal Weather (Continued)",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   },
   "DryDuststorm": {
@@ -248,7 +248,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Seasonal Weather (Continued)",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   },
   "DoubleRainbow": {
@@ -260,7 +260,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Seasonal Weather (Continued)",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   },
   "VPE_RadioactiveFog": {
@@ -272,7 +272,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Vanilla Furniture Expanded - Power",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   },
   "SnowyThunderStorm": {
@@ -296,7 +296,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Vanilla Gravship Expanded - Chapter 1",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   },
   "VGE_ToxicDustCloud": {
@@ -308,7 +308,7 @@
     "EventCap": 3,
     "Enabled": true,
     "ModSource": "Vanilla Gravship Expanded - Chapter 1",
-    "modactive": true,
+    "modactive": false,
     "Version": 1
   }
 }
