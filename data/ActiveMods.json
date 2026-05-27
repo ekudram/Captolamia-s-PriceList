@@ -1,6 +1,6 @@
 {
-  "exportedAt": "2026-04-24T15:46:25.4754984Z",
-  "totalActiveMods": 298,
+  "exportedAt": "2026-05-27T07:09:20.8583080Z",
+  "totalActiveMods": 301,
   "mods": [
     {
       "author": "Gunseeker",
@@ -54,6 +54,12 @@
       "author": "CaptoLamia",
       "name": "[CAP]Nyaron Texture Enhancement Mod",
       "steamId": null,
+      "version": null
+    },
+    {
+      "author": "Orion",
+      "name": "[CAT] Show Hair With Hats or Hide All Hats",
+      "steamId": "2879080074",
       "version": null
     },
     {
@@ -126,7 +132,7 @@
       "author": "Mlie",
       "name": "[RF] Concrete (Continued)",
       "steamId": "2012397587",
-      "version": "1.6.0"
+      "version": "1.6.1"
     },
     {
       "author": "seobongzu",
@@ -144,12 +150,6 @@
       "author": "seobongzu",
       "name": "[sbz] Neat Storage",
       "steamId": "3416243474",
-      "version": null
-    },
-    {
-      "author": "Syrchalis",
-      "name": "[SYR] Processor Framework",
-      "steamId": "3210544395",
       "version": null
     },
     {
@@ -342,7 +342,7 @@
       "author": "Andreas Pardeike",
       "name": "Camera+",
       "steamId": "867467808",
-      "version": "3.3.2.0"
+      "version": "3.4.3.0"
     },
     {
       "author": "harvestingseason",
@@ -960,7 +960,7 @@
       "author": "Mlie",
       "name": "No Version Warning",
       "steamId": "2599504692",
-      "version": "1.6.99"
+      "version": "1.6.103"
     },
     {
       "author": "Mehni",
@@ -1107,6 +1107,18 @@
       "version": null
     },
     {
+      "author": "Torann",
+      "name": "Rim War",
+      "steamId": "2222935097",
+      "version": null
+    },
+    {
+      "author": "kev675243",
+      "name": "Rim War + Vanilla Base Generation Expanded Patch",
+      "steamId": "3459675416",
+      "version": null
+    },
+    {
       "author": "Jaxe",
       "name": "RimHUD",
       "steamId": "1508850027",
@@ -1242,7 +1254,7 @@
       "author": "Mlie",
       "name": "Show Me Your Hands",
       "steamId": "2475965842",
-      "version": "1.6.4"
+      "version": "1.6.5"
     },
     {
       "author": "Mlie",
@@ -1266,7 +1278,7 @@
       "author": "B4ttl3m3d (Dev),  Pumpkinlass (Art)",
       "name": "SimpleBabyCarry",
       "steamId": "3692756679",
-      "version": "1.9.3"
+      "version": "2.3.1"
     },
     {
       "author": "Lanilor",
@@ -1476,6 +1488,12 @@
       "author": "Oskar Potocki,  xrushha,  SmashPhil,  legodude17",
       "name": "Vanilla Apparel Expanded — Accessories",
       "steamId": "2521176396",
+      "version": null
+    },
+    {
+      "author": "Kikohi, Oskar Potocki",
+      "name": "Vanilla Base Generation Expanded",
+      "steamId": "3209927822",
       "version": null
     },
     {
