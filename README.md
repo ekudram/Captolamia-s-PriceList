@@ -16,26 +16,29 @@ A GitHub Pages site for displaying RICS mod purchase lists.
    - `Traits.json`
    - `RaceSettings.json`          ← note: corrected spelling
    - `Weather.json`
-   - `ActiveMods.json`            ← **NEW** — automatically generated on every game start
+   - `CommandSettings.json`       ← **Commands** tab (all chat commands + settings)
+   - `ActiveMods.json`            ← automatically generated on every game start
 
 4. Your price list will be available at `https://yourusername.github.io/rics-pricelist/`
 
 ### Customization
 - Edit `index.html` to change the title or layout
 - Modify `assets/css/rics-store.css` to change colors and styling
-- The **Mods** tab is now available and will automatically show all active mods with direct Steam Workshop links when a Steam ID is present.
+- The **Mods** tab shows active mods with Steam Workshop links when a Steam ID is present.
+- The **Commands** tab lists every RICS chat command (including disabled ones), with status badges and expandable sub-settings (cooldown, cost, permission, aliases, raid options, etc.).
 - Update the JSON files in `data/` whenever your RICS mod generates new ones (most are updated on game start or when you change store/trait settings).
 
 ### File Structure
 - `index.html` - Main page
 - `assets/css/rics-store.css` - Styles
-- `assets/js/rics-store.js` - Functionality (now includes **Mods** tab support)
+- `assets/js/rics-store.js` - Functionality (Items, Events, Weather, Traits, Races, Commands, Mods)
 - `data/` - Your RICS JSON files go here:
   - `StoreItems.json`
   - `Incidents.json`
   - `Traits.json`
   - `RaceSettings.json`
   - `Weather.json`
+  - `CommandSettings.json` ← chat command settings from CAP_ChatInteractive
   - `ActiveMods.json` ← automatically created by RICS on every game start (contains active mods + Steam IDs)
 
 ## Updating Your Fork

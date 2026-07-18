@@ -294,6 +294,104 @@ header p {
     margin-left: 10px;
 }
 
+/* ==================== COMMANDS COLLAPSIBLE GROUPS ==================== */
+.command-group.status-disabled summary {
+    background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+    color: #64748b;
+}
+
+.command-group.status-disabled summary strong {
+    color: #64748b;
+}
+
+.status-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 999px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.status-badge.status-enabled {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.status-disabled {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.command-perm {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: #f5eef6;
+    color: #6b4e71;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.command-settings-list {
+    padding: 4px 0;
+    background: #fafcff;
+}
+
+.command-setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e6e9f0;
+}
+
+.command-setting-row:last-child {
+    border-bottom: none;
+}
+
+.command-setting-row:hover {
+    background: #f8f4f9;
+}
+
+.command-setting-label {
+    color: #64748b;
+    font-size: 0.92rem;
+    flex: 0 0 42%;
+}
+
+.command-setting-value {
+    flex: 1;
+    text-align: right;
+    color: #2c3e50;
+    word-break: break-word;
+}
+
+.setting-chip {
+    display: inline-block;
+    margin: 2px 4px 2px 0;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #f5eef6;
+    color: #6b4e71;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.command-group summary code {
+    background: #f5eef6;
+    color: #6b4e71;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
 /* Price in xenotypes - orange accent */
 .xenotype-item > div:last-child {
     color: #c44536;
@@ -382,6 +480,19 @@ header p {
     
     .items-table {
         min-width: 600px;
+    }
+
+    .command-setting-row {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .command-setting-label {
+        flex: none;
+    }
+
+    .command-setting-value {
+        text-align: left;
     }
 }
 

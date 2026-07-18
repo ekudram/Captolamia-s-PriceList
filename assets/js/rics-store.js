@@ -1,8 +1,8 @@
 // assets/js/rics-store.js
 class RICSStore {
     constructor() {
-        this.data = { items: [], events: [], traits: [], races: [], weather: [], mods: [] };
-        this.filteredData = { items: [], events: [], traits: [], races: [], weather: [], mods: [] };
+        this.data = { items: [], events: [], traits: [], races: [], weather: [], commands: [], mods: [] };
+        this.filteredData = { items: [], events: [], traits: [], races: [], weather: [], commands: [], mods: [] };
         this.currentSort = {};
         this.loadFailed = false;
         this.init();
@@ -22,6 +22,7 @@ class RICSStore {
             this.loadJson('races', 'data/RaceSettings.json', this.processRacesData.bind(this)),
             this.loadJson('events', 'data/Incidents.json', this.processEventsData.bind(this)),
             this.loadJson('weather', 'data/Weather.json', this.processWeatherData.bind(this)),
+            this.loadJson('commands', 'data/CommandSettings.json', this.processCommandsData.bind(this)),
 			this.loadJson('mods', 'data/ActiveMods.json', this.processModsData.bind(this))
         ];
 
@@ -40,6 +41,7 @@ class RICSStore {
             races: this.data.races.length,
             events: this.data.events.length,
             weather: this.data.weather.length,
+            commands: this.data.commands.length,
             mods: this.data.mods.length
         });
     }
@@ -205,6 +207,37 @@ processRacesData(racesObject) {
         }));
     }
 
+    /** Show every command (enabled and disabled) with full sub-settings. */
+    processCommandsData(commandsObject) {
+        return Object.entries(commandsObject || {})
+            .map(([key, cmd]) => ({
+                defName: key,
+                name: key,
+                enabled: cmd.Enabled === true,
+                cooldownSeconds: cmd.CooldownSeconds ?? 0,
+                cost: cmd.Cost ?? 0,
+                supportsCost: cmd.SupportsCost === true,
+                permissionLevel: cmd.PermissionLevel || 'everyone',
+                requiresConfirmation: cmd.RequiresConfirmation === true,
+                commandAlias: cmd.CommandAlias || '',
+                useCommandCooldown: cmd.useCommandCooldown === true,
+                maxUsesPerCooldownPeriod: cmd.MaxUsesPerCooldownPeriod ?? 0,
+                allowedRaidTypes: Array.isArray(cmd.AllowedRaidTypes) ? cmd.AllowedRaidTypes : [],
+                allowedRaidStrategies: Array.isArray(cmd.AllowedRaidStrategies) ? cmd.AllowedRaidStrategies : [],
+                defaultRaidWager: cmd.DefaultRaidWager,
+                minRaidWager: cmd.MinRaidWager,
+                maxRaidWager: cmd.MaxRaidWager,
+                defaultMilitaryAidWager: cmd.DefaultMilitaryAidWager,
+                minMilitaryAidWager: cmd.MinMilitaryAidWager,
+                maxMilitaryAidWager: cmd.MaxMilitaryAidWager,
+                defaultLootBoxSize: cmd.DefaultLootBoxSize,
+                minLootBoxSize: cmd.MinLootBoxSize,
+                maxLootBoxSize: cmd.MaxLootBoxSize,
+                customData: cmd.CustomData || ''
+            }))
+            .sort((a, b) => a.name.localeCompare(b.name));
+    }
+
     processTraitDescription(description) {
         return description
             .replace(/{PAWN_nameDef}/g, 'Timmy')
@@ -230,6 +263,7 @@ processRacesData(racesObject) {
         this.renderWeather();
         this.renderTraits();
         this.renderRaces();
+        this.renderCommands();
 		this.renderMods();
     }
 
@@ -368,6 +402,109 @@ processRacesData(racesObject) {
 		container.innerHTML = html;
 	}
 
+    renderCommands() {
+        const container = document.getElementById('commands-container');
+        const commands = this.filteredData.commands;
+
+        if (!container) return;
+        if (commands.length === 0) {
+            container.innerHTML = '<div style="text-align:center;padding:40px;">No commands found</div>';
+            return;
+        }
+
+        let html = '';
+        commands.forEach(cmd => {
+            const statusClass = cmd.enabled ? 'status-enabled' : 'status-disabled';
+            const statusLabel = cmd.enabled ? 'Enabled' : 'Disabled';
+            const aliasText = cmd.commandAlias
+                ? ` • Alias: <code>!${this.escapeHtml(cmd.commandAlias)}</code>`
+                : '';
+            const costText = cmd.supportsCost || cmd.cost > 0
+                ? ` • Cost: <strong>${cmd.cost}</strong>`
+                : '';
+            const cooldownText = cmd.cooldownSeconds > 0 || cmd.useCommandCooldown
+                ? ` • CD: <strong>${cmd.cooldownSeconds}s</strong>`
+                : '';
+
+            html += `
+                <details class="race-group command-group ${statusClass}">
+                    <summary>
+                        <span class="status-badge ${statusClass}">${statusLabel}</span>
+                        <strong>!${this.escapeHtml(cmd.name)}</strong>
+                        <span class="command-perm">${this.escapeHtml(cmd.permissionLevel)}</span>
+                        ${aliasText}${costText}${cooldownText}
+                    </summary>
+                    <div class="command-settings-list">
+                        ${this.renderCommandSettings(cmd)}
+                    </div>
+                </details>
+            `;
+        });
+
+        container.innerHTML = html;
+    }
+
+    renderCommandSettings(cmd) {
+        const rows = [];
+        const add = (label, value) => {
+            if (value === undefined || value === null || value === '') return;
+            let display;
+            if (Array.isArray(value)) {
+                if (value.length === 0) return;
+                display = value.map(v => `<span class="setting-chip">${this.escapeHtml(String(v))}</span>`).join(' ');
+            } else if (typeof value === 'boolean') {
+                display = value
+                    ? '<span class="status-badge status-enabled">Yes</span>'
+                    : '<span class="status-badge status-disabled">No</span>';
+            } else {
+                display = `<strong>${this.escapeHtml(String(value))}</strong>`;
+            }
+            rows.push(`
+                <div class="command-setting-row">
+                    <div class="command-setting-label">${this.escapeHtml(label)}</div>
+                    <div class="command-setting-value">${display}</div>
+                </div>
+            `);
+        };
+
+        // Core settings (always shown)
+        add('Enabled', cmd.enabled);
+        add('Permission', cmd.permissionLevel);
+        add('Command alias', cmd.commandAlias || '(none)');
+        add('Cost', cmd.cost);
+        add('Supports cost', cmd.supportsCost);
+        add('Cooldown (seconds)', cmd.cooldownSeconds);
+        add('Uses command cooldown', cmd.useCommandCooldown);
+        add('Max uses per cooldown', cmd.maxUsesPerCooldownPeriod);
+        add('Requires confirmation', cmd.requiresConfirmation);
+
+        // Specialty settings only when configured / relevant
+        add('Allowed raid types', cmd.allowedRaidTypes);
+        add('Allowed raid strategies', cmd.allowedRaidStrategies);
+
+        const isRaidCmd = cmd.name === 'raid' || (cmd.allowedRaidTypes && cmd.allowedRaidTypes.length > 0);
+        const isMilAidCmd = cmd.name === 'militaryaid';
+        const isLootCmd = cmd.name === 'openlootbox' || cmd.name === 'cleanlootboxes';
+
+        if (isRaidCmd && (cmd.defaultRaidWager !== undefined || cmd.minRaidWager !== undefined || cmd.maxRaidWager !== undefined)) {
+            add('Raid wager (default / min / max)',
+                `${cmd.defaultRaidWager ?? '—'} / ${cmd.minRaidWager ?? '—'} / ${cmd.maxRaidWager ?? '—'}`);
+        }
+        if (isMilAidCmd && (cmd.defaultMilitaryAidWager !== undefined || cmd.minMilitaryAidWager !== undefined || cmd.maxMilitaryAidWager !== undefined)) {
+            add('Military aid wager (default / min / max)',
+                `${cmd.defaultMilitaryAidWager ?? '—'} / ${cmd.minMilitaryAidWager ?? '—'} / ${cmd.maxMilitaryAidWager ?? '—'}`);
+        }
+        if (isLootCmd && (cmd.defaultLootBoxSize !== undefined || cmd.minLootBoxSize !== undefined || cmd.maxLootBoxSize !== undefined)) {
+            add('Loot box size (default / min / max)',
+                `${cmd.defaultLootBoxSize ?? '—'} / ${cmd.minLootBoxSize ?? '—'} / ${cmd.maxLootBoxSize ?? '—'}`);
+        }
+        if (cmd.customData) {
+            add('Custom data', cmd.customData);
+        }
+
+        return rows.join('') || '<div style="padding:12px;color:#888;">No sub-settings.</div>';
+    }
+
     renderWeather() { /* unchanged */ 
         const tbody = document.getElementById('weather-tbody');
         const weather = this.filteredData.weather;
@@ -440,7 +577,7 @@ processRacesData(racesObject) {
         document.querySelectorAll('.tab-button').forEach(btn => {
             btn.addEventListener('click', () => this.switchTab(btn.dataset.tab));
         });
-        ['items','events','weather','traits','races','mods'].forEach(tab => this.setupSearch(tab));
+        ['items','events','weather','traits','races','commands','mods'].forEach(tab => this.setupSearch(tab));
         this.setupSorting();
     }
 
@@ -456,6 +593,26 @@ processRacesData(racesObject) {
         const all = this.data[tabName] || [];
         if (!term) {
             this.filteredData[tabName] = [...all];
+        } else if (tabName === 'commands') {
+            this.filteredData.commands = all.filter(cmd => {
+                const status = cmd.enabled ? 'enabled' : 'disabled';
+                const text = [
+                    cmd.name, cmd.defName, cmd.commandAlias, cmd.permissionLevel,
+                    status, String(cmd.cost), String(cmd.cooldownSeconds),
+                    ...(cmd.allowedRaidTypes || []),
+                    ...(cmd.allowedRaidStrategies || []),
+                    cmd.customData || ''
+                ].join(' ').toLowerCase();
+                return text.includes(term);
+            });
+        } else if (tabName === 'races') {
+            this.filteredData.races = all.filter(race => {
+                const xenoNames = (race.xenotypes || []).map(x => x.name).join(' ');
+                const text = [
+                    race.name, race.defName, race.defaultXenotype, xenoNames
+                ].join(' ').toLowerCase();
+                return text.includes(term);
+            });
         } else {
             this.filteredData[tabName] = all.filter(item => {
 				const text = [
