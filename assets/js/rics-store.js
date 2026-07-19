@@ -9,9 +9,66 @@ class RICSStore {
     }
 
     async init() {
+        this.setupThemeToggle();
         await this.loadAllData();
         this.renderAllTabs();
         this.setupEventListeners();
+    }
+
+    // ==================== THEME (light / dark) ====================
+    getPreferredTheme() {
+        try {
+            const saved = localStorage.getItem('rics-theme');
+            if (saved === 'light' || saved === 'dark') return saved;
+        } catch (e) { /* private mode */ }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    applyTheme(theme, { persist = false } = {}) {
+        const next = theme === 'dark' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        if (persist) {
+            try {
+                localStorage.setItem('rics-theme', next);
+            } catch (e) { /* ignore */ }
+        }
+        this.updateThemeToggleUi(next);
+    }
+
+    updateThemeToggleUi(theme) {
+        const btn = document.getElementById('theme-toggle');
+        if (!btn) return;
+        const isDark = theme === 'dark';
+        const icon = btn.querySelector('.theme-icon');
+        const label = btn.querySelector('.theme-label');
+        if (icon) icon.textContent = isDark ? '☀️' : '🌙';
+        if (label) label.textContent = isDark ? 'Light' : 'Dark';
+        btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        btn.title = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+    }
+
+    setupThemeToggle() {
+        const current = document.documentElement.getAttribute('data-theme') || this.getPreferredTheme();
+        this.applyTheme(current, { persist: false });
+
+        const btn = document.getElementById('theme-toggle');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                const now = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                this.applyTheme(now === 'dark' ? 'light' : 'dark', { persist: true });
+            });
+        }
+
+        // Follow OS theme only until the user picks one manually
+        try {
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                try {
+                    if (localStorage.getItem('rics-theme')) return;
+                } catch (err) { /* ignore */ }
+                this.applyTheme(e.matches ? 'dark' : 'light', { persist: false });
+            });
+        } catch (e) { /* ignore */ }
     }
 
     async loadAllData() {
@@ -210,32 +267,172 @@ processRacesData(racesObject) {
     /** Show every command (enabled and disabled) with full sub-settings. */
     processCommandsData(commandsObject) {
         return Object.entries(commandsObject || {})
-            .map(([key, cmd]) => ({
-                defName: key,
-                name: key,
-                enabled: cmd.Enabled === true,
-                cooldownSeconds: cmd.CooldownSeconds ?? 0,
-                cost: cmd.Cost ?? 0,
-                supportsCost: cmd.SupportsCost === true,
-                permissionLevel: cmd.PermissionLevel || 'everyone',
-                requiresConfirmation: cmd.RequiresConfirmation === true,
-                commandAlias: cmd.CommandAlias || '',
-                useCommandCooldown: cmd.useCommandCooldown === true,
-                maxUsesPerCooldownPeriod: cmd.MaxUsesPerCooldownPeriod ?? 0,
-                allowedRaidTypes: Array.isArray(cmd.AllowedRaidTypes) ? cmd.AllowedRaidTypes : [],
-                allowedRaidStrategies: Array.isArray(cmd.AllowedRaidStrategies) ? cmd.AllowedRaidStrategies : [],
-                defaultRaidWager: cmd.DefaultRaidWager,
-                minRaidWager: cmd.MinRaidWager,
-                maxRaidWager: cmd.MaxRaidWager,
-                defaultMilitaryAidWager: cmd.DefaultMilitaryAidWager,
-                minMilitaryAidWager: cmd.MinMilitaryAidWager,
-                maxMilitaryAidWager: cmd.MaxMilitaryAidWager,
-                defaultLootBoxSize: cmd.DefaultLootBoxSize,
-                minLootBoxSize: cmd.MinLootBoxSize,
-                maxLootBoxSize: cmd.MaxLootBoxSize,
-                customData: cmd.CustomData || ''
-            }))
+            .map(([key, cmd]) => {
+                const customSettings = this.parseCustomData(cmd.CustomData);
+                return {
+                    defName: key,
+                    name: key,
+                    enabled: cmd.Enabled === true,
+                    cooldownSeconds: cmd.CooldownSeconds ?? 0,
+                    cost: cmd.Cost ?? 0,
+                    supportsCost: cmd.SupportsCost === true,
+                    permissionLevel: cmd.PermissionLevel || 'everyone',
+                    requiresConfirmation: cmd.RequiresConfirmation === true,
+                    commandAlias: cmd.CommandAlias || '',
+                    useCommandCooldown: cmd.useCommandCooldown === true,
+                    maxUsesPerCooldownPeriod: cmd.MaxUsesPerCooldownPeriod ?? 0,
+                    allowedRaidTypes: Array.isArray(cmd.AllowedRaidTypes) ? cmd.AllowedRaidTypes : [],
+                    allowedRaidStrategies: Array.isArray(cmd.AllowedRaidStrategies) ? cmd.AllowedRaidStrategies : [],
+                    // Legacy top-level fields (older exports); preferred source is CustomData JSON
+                    defaultRaidWager: cmd.DefaultRaidWager,
+                    minRaidWager: cmd.MinRaidWager,
+                    maxRaidWager: cmd.MaxRaidWager,
+                    defaultMilitaryAidWager: cmd.DefaultMilitaryAidWager,
+                    minMilitaryAidWager: cmd.MinMilitaryAidWager,
+                    maxMilitaryAidWager: cmd.MaxMilitaryAidWager,
+                    defaultLootBoxSize: cmd.DefaultLootBoxSize,
+                    minLootBoxSize: cmd.MinLootBoxSize,
+                    maxLootBoxSize: cmd.MaxLootBoxSize,
+                    customDataRaw: cmd.CustomData || '',
+                    customSettings
+                };
+            })
             .sort((a, b) => a.name.localeCompare(b.name));
+    }
+
+    /**
+     * CustomData in RICS is a JSON object of string values
+     * (see CommandSettings.CustomData / Dialog_CommandManager).
+     */
+    parseCustomData(raw) {
+        if (raw == null) return [];
+        if (typeof raw === 'object' && !Array.isArray(raw)) {
+            return Object.entries(raw).map(([key, value]) => this.normalizeCustomEntry(key, value));
+        }
+        if (typeof raw !== 'string') return [];
+        const trimmed = raw.trim();
+        if (!trimmed || trimmed === '{}') return [];
+        try {
+            const obj = JSON.parse(trimmed);
+            if (!obj || typeof obj !== 'object' || Array.isArray(obj)) {
+                return [this.normalizeCustomEntry('_raw', trimmed)];
+            }
+            return Object.entries(obj).map(([key, value]) => this.normalizeCustomEntry(key, value));
+        } catch (e) {
+            return [this.normalizeCustomEntry('_raw', trimmed)];
+        }
+    }
+
+    normalizeCustomEntry(key, value) {
+        const str = value == null ? '' : String(value);
+        return {
+            key,
+            label: this.getCustomDataLabel(key),
+            value: str,
+            kind: this.detectCustomValueKind(str)
+        };
+    }
+
+    detectCustomValueKind(str) {
+        const lower = String(str).trim().toLowerCase();
+        if (lower === 'true' || lower === 'false') return 'bool';
+        if (str.trim() !== '' && !Number.isNaN(Number(str)) && /^-?\d+(\.\d+)?$/.test(str.trim())) return 'number';
+        return 'text';
+    }
+
+    /** Friendly labels matching Commands.xml / Command Manager UI. */
+    getCustomDataLabel(key) {
+        const labels = {
+            // Backstories
+            childhoodWager: 'Childhood wager cost',
+            adulthoodWager: 'Adulthood wager cost',
+            // Loot / gifts / use
+            showDebugInfo: 'Show debug info in lootbox messages',
+            maxGiftAmount: 'Max gift amount',
+            giftFeePercent: 'Gift fee % (taken from gift)',
+            maxUsesPerPeriod: 'Max uses per period (0 = unlimited)',
+            // Surgery
+            allowGenderSwap: 'Allow gender swap',
+            genderSwapCost: 'Gender swap cost',
+            allowBodyChange: 'Allow body change',
+            bodyChangeCost: 'Body change cost',
+            allowSterilize: 'Allow sterilize',
+            sterilizeCost: 'Sterilize cost',
+            allowIUD: 'Allow IUD',
+            iudCost: 'IUD cost',
+            allowVasReverse: 'Allow vas reverse',
+            vasReverseCost: 'Vas reverse cost',
+            allowTerminate: 'Allow terminate',
+            terminateCost: 'Terminate cost',
+            allowHemogen: 'Allow hemogen',
+            hemogenCost: 'Hemogen cost',
+            allowTransfusion: 'Allow transfusion',
+            transfusionCost: 'Transfusion cost',
+            allowMiscBiotech: 'Allow misc biotech',
+            miscBiotechCost: 'Misc biotech cost',
+            // Military / raid
+            defaultMilitaryAidWager: 'Default military aid wager',
+            minMilitaryAidWager: 'Min military aid wager',
+            maxMilitaryAidWager: 'Max military aid wager',
+            defaultRaidWager: 'Default raid wager',
+            minRaidWager: 'Minimum raid wager',
+            maxRaidWager: 'Maximum raid wager',
+            // MyPawn sub-views
+            enableBody: 'Body',
+            enableHealth: 'Health',
+            enableImplants: 'Implants',
+            enableGear: 'Gear',
+            enableWeapon: 'Weapon',
+            enableKills: 'Kills',
+            enableNeeds: 'Needs',
+            enableRelations: 'Relations',
+            enableSkills: 'Skills',
+            enableStats: 'Stats',
+            enableStory: 'Story',
+            enableTraits: 'Traits',
+            enableWork: 'Work',
+            enableJob: 'Job / action',
+            enablePsycasts: 'Psycasts',
+            enableMechs: 'Mechs',
+            // Revive / heal / dye
+            enableSelfRevive: 'Self revive',
+            enableTargetRevive: 'Target revive',
+            enableAllRevive: 'All revive',
+            reviveCostMultiplier: 'Revive cost multiplier',
+            enableSelfHeal: 'Self heal',
+            enableTargetHeal: 'Target heal',
+            enableAllHeal: 'All heal',
+            healCostMultiplier: 'Heal cost multiplier',
+            enableHairDye: 'Hair dye',
+            enableApparelDye: 'Apparel dye',
+            // Passion
+            minPassionWager: 'Min passion wager',
+            maxPassionWager: 'Max passion wager',
+            passionWagerBonusPer100: 'Bonus % per 100 coins wagered',
+            maxPassionWagerBonus: 'Maximum bonus from wager',
+            basePassionSuccessChance: 'Base success chance (%)',
+            maxPassionSuccessChance: 'Max success chance (%)',
+            criticalSuccessRatio: 'Critical success multiplier (of base chance)',
+            maxCriticalSuccessChance: 'Hard cap on critical success chance (%)',
+            criticalFailBaseChance: 'Base critical failure chance (%)',
+            criticalFailReductionFactor: 'Crit-fail reduction per success chance point',
+            minCriticalFailChance: 'Minimum critical failure chance (%)',
+            critSuccessUpgradeVsNewChance: 'Crit success: upgrade existing passion vs gain new',
+            critFailLoseVsWrongChance: 'Crit fail: lose passion vs gain useless one',
+            targetedCritFailAffectTargetChance: 'Targeted crit fail: affect target skill vs random',
+            // Rescue
+            leftBehindCost: 'Left-behind drop cost',
+            capturedCost: 'Captured rescue-mission cost',
+            // Interaction sub-commands
+            enabled: 'Interaction enabled',
+            _raw: 'Custom data'
+        };
+        if (labels[key]) return labels[key];
+        // camelCase / PascalCase → readable words
+        return String(key)
+            .replace(/([a-z])([A-Z])/g, '$1 $2')
+            .replace(/[_-]+/g, ' ')
+            .replace(/^\w/, c => c.toUpperCase());
     }
 
     processTraitDescription(description) {
@@ -425,6 +622,10 @@ processRacesData(racesObject) {
             const cooldownText = cmd.cooldownSeconds > 0 || cmd.useCommandCooldown
                 ? ` • CD: <strong>${cmd.cooldownSeconds}s</strong>`
                 : '';
+            const customCount = (cmd.customSettings || []).length;
+            const customHint = customCount
+                ? ` • <span class="command-custom-hint">${customCount} option${customCount === 1 ? '' : 's'}</span>`
+                : '';
 
             html += `
                 <details class="race-group command-group ${statusClass}">
@@ -432,7 +633,7 @@ processRacesData(racesObject) {
                         <span class="status-badge ${statusClass}">${statusLabel}</span>
                         <strong>!${this.escapeHtml(cmd.name)}</strong>
                         <span class="command-perm">${this.escapeHtml(cmd.permissionLevel)}</span>
-                        ${aliasText}${costText}${cooldownText}
+                        ${aliasText}${costText}${cooldownText}${customHint}
                     </summary>
                     <div class="command-settings-list">
                         ${this.renderCommandSettings(cmd)}
@@ -467,7 +668,16 @@ processRacesData(racesObject) {
             `);
         };
 
+        const addSection = (title) => {
+            rows.push(`
+                <div class="command-settings-section">
+                    <div class="command-settings-section-title">${this.escapeHtml(title)}</div>
+                </div>
+            `);
+        };
+
         // Core settings (always shown)
+        addSection('General');
         add('Enabled', cmd.enabled);
         add('Permission', cmd.permissionLevel);
         add('Command alias', cmd.commandAlias || '(none)');
@@ -478,31 +688,76 @@ processRacesData(racesObject) {
         add('Max uses per cooldown', cmd.maxUsesPerCooldownPeriod);
         add('Requires confirmation', cmd.requiresConfirmation);
 
-        // Specialty settings only when configured / relevant
-        add('Allowed raid types', cmd.allowedRaidTypes);
-        add('Allowed raid strategies', cmd.allowedRaidStrategies);
+        // Raid lists (still top-level fields in CommandSettings)
+        if ((cmd.allowedRaidTypes && cmd.allowedRaidTypes.length) ||
+            (cmd.allowedRaidStrategies && cmd.allowedRaidStrategies.length)) {
+            addSection('Raid options');
+            add('Allowed raid types', cmd.allowedRaidTypes);
+            add('Allowed raid strategies', cmd.allowedRaidStrategies);
+        }
 
-        const isRaidCmd = cmd.name === 'raid' || (cmd.allowedRaidTypes && cmd.allowedRaidTypes.length > 0);
-        const isMilAidCmd = cmd.name === 'militaryaid';
+        // CustomData JSON — primary home for command-specific options in modern RICS
+        const customKeys = new Set((cmd.customSettings || []).map(s => s.key));
+        if (cmd.customSettings && cmd.customSettings.length) {
+            addSection('Command-specific settings');
+            cmd.customSettings.forEach(entry => {
+                rows.push(this.renderCustomDataRow(entry));
+            });
+        }
+
+        // Legacy top-level wager/loot fields only if not already covered by CustomData
         const isLootCmd = cmd.name === 'openlootbox' || cmd.name === 'cleanlootboxes';
+        const hasLegacyRaid =
+            !customKeys.has('defaultRaidWager') && !customKeys.has('minRaidWager') && !customKeys.has('maxRaidWager') &&
+            (cmd.defaultRaidWager !== undefined || cmd.minRaidWager !== undefined || cmd.maxRaidWager !== undefined) &&
+            (cmd.name === 'raid' || (cmd.allowedRaidTypes && cmd.allowedRaidTypes.length > 0));
+        const hasLegacyMil =
+            !customKeys.has('defaultMilitaryAidWager') &&
+            cmd.name === 'militaryaid' &&
+            (cmd.defaultMilitaryAidWager !== undefined || cmd.minMilitaryAidWager !== undefined || cmd.maxMilitaryAidWager !== undefined);
 
-        if (isRaidCmd && (cmd.defaultRaidWager !== undefined || cmd.minRaidWager !== undefined || cmd.maxRaidWager !== undefined)) {
+        if (hasLegacyRaid) {
+            addSection('Raid wagers (legacy)');
             add('Raid wager (default / min / max)',
                 `${cmd.defaultRaidWager ?? '—'} / ${cmd.minRaidWager ?? '—'} / ${cmd.maxRaidWager ?? '—'}`);
         }
-        if (isMilAidCmd && (cmd.defaultMilitaryAidWager !== undefined || cmd.minMilitaryAidWager !== undefined || cmd.maxMilitaryAidWager !== undefined)) {
+        if (hasLegacyMil) {
+            addSection('Military aid wagers (legacy)');
             add('Military aid wager (default / min / max)',
                 `${cmd.defaultMilitaryAidWager ?? '—'} / ${cmd.minMilitaryAidWager ?? '—'} / ${cmd.maxMilitaryAidWager ?? '—'}`);
         }
         if (isLootCmd && (cmd.defaultLootBoxSize !== undefined || cmd.minLootBoxSize !== undefined || cmd.maxLootBoxSize !== undefined)) {
+            addSection('Loot box');
             add('Loot box size (default / min / max)',
                 `${cmd.defaultLootBoxSize ?? '—'} / ${cmd.minLootBoxSize ?? '—'} / ${cmd.maxLootBoxSize ?? '—'}`);
         }
-        if (cmd.customData) {
-            add('Custom data', cmd.customData);
-        }
 
         return rows.join('') || '<div style="padding:12px;color:#888;">No sub-settings.</div>';
+    }
+
+    renderCustomDataRow(entry) {
+        let display;
+        if (entry.kind === 'bool') {
+            const on = String(entry.value).toLowerCase() === 'true';
+            display = on
+                ? '<span class="status-badge status-enabled">Yes</span>'
+                : '<span class="status-badge status-disabled">No</span>';
+        } else if (entry.kind === 'number') {
+            // Preserve decimals from JSON strings (e.g. "1.0")
+            display = `<strong class="custom-number">${this.escapeHtml(entry.value)}</strong>`;
+        } else {
+            display = `<strong>${this.escapeHtml(entry.value)}</strong>`;
+        }
+
+        return `
+            <div class="command-setting-row custom-data-row" data-key="${this.escapeHtml(entry.key)}">
+                <div class="command-setting-label">
+                    ${this.escapeHtml(entry.label)}
+                    <span class="custom-data-key">${this.escapeHtml(entry.key)}</span>
+                </div>
+                <div class="command-setting-value">${display}</div>
+            </div>
+        `;
     }
 
     renderWeather() { /* unchanged */ 
@@ -596,12 +851,16 @@ processRacesData(racesObject) {
         } else if (tabName === 'commands') {
             this.filteredData.commands = all.filter(cmd => {
                 const status = cmd.enabled ? 'enabled' : 'disabled';
+                const customText = (cmd.customSettings || [])
+                    .map(s => `${s.key} ${s.label} ${s.value}`)
+                    .join(' ');
                 const text = [
                     cmd.name, cmd.defName, cmd.commandAlias, cmd.permissionLevel,
                     status, String(cmd.cost), String(cmd.cooldownSeconds),
                     ...(cmd.allowedRaidTypes || []),
                     ...(cmd.allowedRaidStrategies || []),
-                    cmd.customData || ''
+                    cmd.customDataRaw || '',
+                    customText
                 ].join(' ').toLowerCase();
                 return text.includes(term);
             });

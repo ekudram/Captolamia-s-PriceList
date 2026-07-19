@@ -24,6 +24,7 @@ A GitHub Pages site for displaying RICS mod purchase lists.
 ### Customization
 - Edit `index.html` to change the title or layout
 - Modify `assets/css/rics-store.css` to change colors and styling
+- **Light / Dark mode**: use the toggle in the header (choice is saved in the browser). Defaults to the viewer’s system preference.
 - The **Mods** tab shows active mods with Steam Workshop links when a Steam ID is present.
 - The **Commands** tab lists every RICS chat command (including disabled ones), with status badges and expandable sub-settings (cooldown, cost, permission, aliases, raid options, etc.).
 - Update the JSON files in `data/` whenever your RICS mod generates new ones (most are updated on game start or when you change store/trait settings).

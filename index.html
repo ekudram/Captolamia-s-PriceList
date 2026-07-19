@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RICS Store - Purchase List</title>
+    <script>
+        // Apply saved / system theme before paint to avoid flash
+        (function () {
+            try {
+                var saved = localStorage.getItem('rics-theme');
+                var theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="assets/css/rics-store.css">
 </head>
 <body>
     <div class="container">
         <header>
+            <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">
+                <span class="theme-icon" aria-hidden="true">🌙</span>
+                <span class="theme-label">Dark</span>
+            </button>
 			<!-- PUT YOUR NAME HERE -->
             <h1>Captolamia's Store</h1>
 			<!-- Change TExt here to anything you like -->
